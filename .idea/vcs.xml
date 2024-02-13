@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/SchemaScan" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/podofo-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/podofo-src/extern/deps" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cmake-build-debug/_deps/podofo-src/extern/resources" vcs="Git" />
+  </component>
+</project>

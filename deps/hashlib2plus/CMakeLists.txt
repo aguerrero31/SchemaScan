@@ -1,0 +1,1 @@
+add_library(hashlib2plus ./trunk/src/hashlibpp.h)

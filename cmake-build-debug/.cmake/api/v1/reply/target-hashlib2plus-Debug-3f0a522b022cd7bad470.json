@@ -1,0 +1,68 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "deps/hashlib2plus/libhashlib2plus.a"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_add_library",
+			"add_library"
+		],
+		"files" : 
+		[
+			"C:/Users/Andrew/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake",
+			"deps/hashlib2plus/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 639,
+				"parent" : 1
+			}
+		]
+	},
+	"id" : "hashlib2plus::@8630873d793b6e7a6725",
+	"name" : "hashlib2plus",
+	"nameOnDisk" : "libhashlib2plus.a",
+	"paths" : 
+	{
+		"build" : "deps/hashlib2plus",
+		"source" : "deps/hashlib2plus"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"path" : "deps/hashlib2plus/trunk/src/hashlibpp.h",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}
