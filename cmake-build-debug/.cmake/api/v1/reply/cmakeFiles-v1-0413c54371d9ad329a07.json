@@ -413,6 +413,27 @@
 			"path" : "C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/podofo/podofo-config-release.cmake"
 		},
 		{
+			"isExternal" : true,
+			"path" : "C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/libpng/libpng-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "E:/CLion2023/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/libpng/libpng16.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/libpng/libpng16-debug.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/libpng/libpng16-release.cmake"
+		},
+		{
 			"path" : "deps/hashlib2plus/CMakeLists.txt"
 		}
 	],

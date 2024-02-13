@@ -10,7 +10,8 @@ add_executable(SchemaScan SchemaScanConsole/SchemaScanConsole.cpp
 
 # External Dependencies
 find_package(podofo CONFIG REQUIRED)
+find_package(libpng CONFIG REQUIRED)
 add_subdirectory(deps/hashlib2plus)
-target_link_libraries(SchemaScan PRIVATE $<IF:$<TARGET_EXISTS:podofo_shared>,podofo_shared,podofo_static> hashlib2plus SchemaScanLib)
+target_link_libraries(SchemaScan PRIVATE $<IF:$<TARGET_EXISTS:podofo_shared>,podofo_shared,podofo_static> hashlib2plus SchemaScanLib libpng)
 target_include_directories(SchemaScan PUBLIC "${PROJECT_BINARY_DIR}" "${PROJECT_SOURCE_DIR}/deps/hashlib2plus" "${PROJECT_SOURCE_DIR}/SchemaScanLib")
 set_target_properties(hashlib2plus PROPERTIES LINKER_LANGUAGE CXX)

@@ -5,9 +5,9 @@
 #include <podofo/podofo.h>
 #include <memory>
 #include <iostream>
-#include "trunk/src/hashlibpp.h"
 #include <filesystem>
 #include <stdexcept>
+#include "trunk/src/hashlibpp.h"
 #include "podofo/main/PdfInfo.h"
 
 #ifndef SCHEMASEARCH_SCHEMATIC_H
@@ -19,11 +19,17 @@ public:
     Schematic(const std::string &fpath);
     ~Schematic();
     // Functions
+    std::string getFileName() const;
+    std::string getFilePath() const;
+    unsigned int getPagecount() const;
+    std::string getMD5() const;
+    std::vector<std::string> getParsedPages() const;
+    std::string getParsedPage(unsigned int page) const;
 private:
     // Class Members
     std::string file_name_;
     std::string path_;
-    int page_count_;
+    unsigned int page_count_;
     std::string md5_hash_;
     std::vector<std::string> parsed_pages_;
     // Functions

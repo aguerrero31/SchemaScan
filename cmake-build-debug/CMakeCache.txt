@@ -381,6 +381,9 @@ Z_VCPKG_PWSH_PATH:FILEPATH=Z_VCPKG_PWSH_PATH-NOTFOUND
 // triplet
 _VCPKG_INSTALLED_DIR:PATH=C:/Users/Andrew/.vcpkg-clion/vcpkg/installed
 
+//The directory containing a CMake configuration file for libpng.
+libpng_DIR:PATH=C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/libpng
+
 //The directory containing a CMake configuration file for podofo.
 podofo_DIR:PATH=C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/podofo
 

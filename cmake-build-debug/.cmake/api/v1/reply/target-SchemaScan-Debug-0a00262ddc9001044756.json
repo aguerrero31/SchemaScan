@@ -43,13 +43,13 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 14,
+				"line" : 15,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 15,
+				"line" : 16,
 				"parent" : 0
 			}
 		]
@@ -132,6 +132,11 @@
 			{
 				"backtrace" : 3,
 				"fragment" : "-lSchemaScanLib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-llibpng",
 				"role" : "libraries"
 			},
 			{
