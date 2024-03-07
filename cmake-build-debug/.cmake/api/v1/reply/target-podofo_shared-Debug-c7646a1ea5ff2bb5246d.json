@@ -1,0 +1,2518 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "target/libpodofo.dll"
+		},
+		{
+			"path" : "target/libpodofo.dll.a"
+		},
+		{
+			"path" : "target/libpodofo.pdb"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_add_library",
+			"add_library",
+			"install",
+			"target_link_libraries",
+			"set_target_properties",
+			"_find_package",
+			"include",
+			"find_package",
+			"set_property",
+			"find_dependency",
+			"add_compile_options",
+			"add_compile_definitions",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"C:/Users/Andrew/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake",
+			"deps/podofo-0.10.3/src/podofo/CMakeLists.txt",
+			"E:/CLion2023/bin/cmake/win/x64/share/cmake-3.27/Modules/FindOpenSSL.cmake",
+			"C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/openssl/vcpkg-cmake-wrapper.cmake",
+			"deps/podofo-0.10.3/CMakeLists.txt",
+			"C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/freetype/freetype-targets.cmake",
+			"C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/freetype/freetype-config.cmake",
+			"C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/freetype/vcpkg-cmake-wrapper.cmake",
+			"E:/CLion2023/bin/cmake/win/x64/share/cmake-3.27/Modules/FindIconv.cmake",
+			"C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/iconv/vcpkg-cmake-wrapper.cmake",
+			"E:/CLion2023/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake",
+			"C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/libxml2/libxml2-config.cmake",
+			"C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/share/libxml2/vcpkg-cmake-wrapper.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 96,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 639,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 110,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 98,
+				"parent" : 0
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 139,
+				"parent" : 5
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 813,
+				"parent" : 6
+			},
+			{
+				"file" : 3,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 37,
+				"parent" : 8
+			},
+			{
+				"file" : 2,
+				"parent" : 9
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 741,
+				"parent" : 10
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 180,
+				"parent" : 5
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 813,
+				"parent" : 12
+			},
+			{
+				"file" : 7,
+				"parent" : 13
+			},
+			{
+				"command" : 5,
+				"file" : 7,
+				"line" : 6,
+				"parent" : 14
+			},
+			{
+				"file" : 6,
+				"parent" : 15
+			},
+			{
+				"command" : 6,
+				"file" : 6,
+				"line" : 3,
+				"parent" : 16
+			},
+			{
+				"file" : 5,
+				"parent" : 17
+			},
+			{
+				"command" : 4,
+				"file" : 5,
+				"line" : 67,
+				"parent" : 18
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 195,
+				"parent" : 5
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 813,
+				"parent" : 20
+			},
+			{
+				"file" : 12,
+				"parent" : 21
+			},
+			{
+				"command" : 5,
+				"file" : 12,
+				"line" : 2,
+				"parent" : 22
+			},
+			{
+				"file" : 11,
+				"parent" : 23
+			},
+			{
+				"command" : 9,
+				"file" : 11,
+				"line" : 120,
+				"parent" : 24
+			},
+			{
+				"command" : 7,
+				"file" : 10,
+				"line" : 76,
+				"parent" : 25
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 813,
+				"parent" : 26
+			},
+			{
+				"file" : 9,
+				"parent" : 27
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 3,
+				"parent" : 28
+			},
+			{
+				"file" : 8,
+				"parent" : 29
+			},
+			{
+				"command" : 8,
+				"file" : 8,
+				"line" : 180,
+				"parent" : 30
+			},
+			{
+				"command" : 4,
+				"file" : 9,
+				"line" : 11,
+				"parent" : 28
+			},
+			{
+				"command" : 10,
+				"file" : 4,
+				"line" : 118,
+				"parent" : 5
+			},
+			{
+				"command" : 11,
+				"file" : 1,
+				"line" : 9,
+				"parent" : 0
+			},
+			{
+				"command" : 11,
+				"file" : 1,
+				"line" : 68,
+				"parent" : 0
+			},
+			{
+				"command" : 11,
+				"file" : 4,
+				"line" : 81,
+				"parent" : 5
+			},
+			{
+				"command" : 12,
+				"file" : 1,
+				"line" : 18,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"defines" : 
+			[
+				{
+					"backtrace" : 34,
+					"define" : "HAS_UNCAUGHT_EXCEPTIONS=1"
+				},
+				{
+					"backtrace" : 35,
+					"define" : "PODOFO_BUILD"
+				},
+				{
+					"backtrace" : 36,
+					"define" : "PODOFO_SHARED"
+				},
+				{
+					"define" : "podofo_shared_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 37,
+					"path" : "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/deps/podofo-0.10.3/src/podofo"
+				},
+				{
+					"backtrace" : 37,
+					"path" : "E:/Programming/C++ Projects/SchemaScan/deps/podofo-0.10.3/src"
+				},
+				{
+					"backtrace" : 37,
+					"path" : "E:/Programming/C++ Projects/SchemaScan/deps/podofo-0.10.3/3rdparty"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include/libxml2"
+				}
+			],
+			"language" : "RC",
+			"sourceIndexes" : 
+			[
+				2
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -Wall -Woverloaded-virtual -Wswitch -Wcast-qual -Wwrite-strings -Wredundant-decls -Wreorder -Wno-format-truncation -Wno-unknown-pragmas -Wno-unknown-warning-option -g -std=gnu++17 -fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 33,
+					"fragment" : "-fvisibility=hidden"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 34,
+					"define" : "HAS_UNCAUGHT_EXCEPTIONS=1"
+				},
+				{
+					"backtrace" : 35,
+					"define" : "PODOFO_BUILD"
+				},
+				{
+					"backtrace" : 36,
+					"define" : "PODOFO_SHARED"
+				},
+				{
+					"define" : "podofo_shared_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 37,
+					"path" : "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/deps/podofo-0.10.3/src/podofo"
+				},
+				{
+					"backtrace" : 37,
+					"path" : "E:/Programming/C++ Projects/SchemaScan/deps/podofo-0.10.3/src"
+				},
+				{
+					"backtrace" : 37,
+					"path" : "E:/Programming/C++ Projects/SchemaScan/deps/podofo-0.10.3/3rdparty"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include/libxml2"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				3,
+				5,
+				7,
+				9,
+				11,
+				13,
+				15,
+				17,
+				19,
+				21,
+				23,
+				25,
+				27,
+				29,
+				31,
+				33,
+				35,
+				37,
+				39,
+				41,
+				44,
+				46,
+				48,
+				50,
+				52,
+				54,
+				57,
+				59,
+				61,
+				63,
+				65,
+				67,
+				69,
+				71,
+				73,
+				75,
+				77,
+				79,
+				81,
+				83,
+				85,
+				87,
+				89,
+				91,
+				93,
+				95,
+				97,
+				98,
+				100,
+				102,
+				104,
+				105,
+				107,
+				109,
+				111,
+				113,
+				115,
+				117,
+				119,
+				121,
+				123,
+				125,
+				128,
+				130,
+				132,
+				134,
+				136,
+				138,
+				140,
+				142,
+				144,
+				146,
+				148,
+				150,
+				152,
+				154,
+				156,
+				159,
+				161,
+				163,
+				165,
+				167,
+				168,
+				170,
+				173,
+				174,
+				176,
+				178,
+				180,
+				182,
+				184,
+				186,
+				188,
+				190,
+				192,
+				194,
+				196,
+				198,
+				200,
+				202,
+				204,
+				207,
+				209,
+				211,
+				213,
+				215,
+				217,
+				219,
+				221,
+				223,
+				225,
+				227,
+				229,
+				231,
+				233,
+				236,
+				238,
+				241,
+				243,
+				245,
+				247,
+				250,
+				252,
+				254,
+				264,
+				266,
+				268,
+				270,
+				273,
+				275
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "podofo_private::@f7ac6e2bb7fc4542c558"
+		}
+	],
+	"id" : "podofo_shared::@fd8719f68012a87a3dd6",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 3,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 3,
+				"path" : "bin"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Program Files (x86)/SchemaScan"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "target\\libpodofo_private.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "C:\\Users\\Andrew\\.vcpkg-clion\\vcpkg\\installed\\x64-windows\\debug\\lib\\libssl.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "C:\\Users\\Andrew\\.vcpkg-clion\\vcpkg\\installed\\x64-windows\\debug\\lib\\libxml2.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "C:\\Users\\Andrew\\.vcpkg-clion\\vcpkg\\installed\\x64-windows\\debug\\lib\\libpng16d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "C:\\Users\\Andrew\\.vcpkg-clion\\vcpkg\\installed\\x64-windows\\debug\\lib\\tiffd.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "C:\\Users\\Andrew\\.vcpkg-clion\\vcpkg\\installed\\x64-windows\\debug\\lib\\jpeg.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "C:\\Users\\Andrew\\.vcpkg-clion\\vcpkg\\installed\\x64-windows\\debug\\lib\\zlibd.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lkernel32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-luser32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lgdi32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lwinspool",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lcomdlg32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-ladvapi32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lshell32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lole32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-loleaut32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-luuid",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lws2_32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lCrypt32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "C:\\Users\\Andrew\\.vcpkg-clion\\vcpkg\\installed\\x64-windows\\debug\\lib\\libcrypto.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "C:\\Users\\Andrew\\.vcpkg-clion\\vcpkg\\installed\\x64-windows\\debug\\lib\\freetyped.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 31,
+				"fragment" : "C:\\Users\\Andrew\\.vcpkg-clion\\vcpkg\\installed\\x64-windows\\debug\\lib\\iconv.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 32,
+				"fragment" : "C:\\Users\\Andrew\\.vcpkg-clion\\vcpkg\\installed\\x64-windows\\debug\\lib\\charset.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "podofo_shared",
+	"nameOnDisk" : "libpodofo.dll",
+	"paths" : 
+	{
+		"build" : "deps/podofo-0.10.3/src/podofo",
+		"source" : "deps/podofo-0.10.3/src/podofo"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		},
+		{
+			"name" : "main",
+			"sourceIndexes" : 
+			[
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109,
+				110,
+				111,
+				112,
+				113,
+				114,
+				115,
+				116,
+				117,
+				118,
+				119,
+				120,
+				121,
+				122,
+				123,
+				124,
+				125,
+				126,
+				127,
+				128,
+				129,
+				130,
+				131,
+				132,
+				133,
+				134,
+				135,
+				136,
+				137,
+				138,
+				139,
+				140,
+				141,
+				142,
+				143,
+				144,
+				145,
+				146,
+				147,
+				148,
+				149,
+				150,
+				151,
+				152,
+				153,
+				154,
+				155,
+				156,
+				157,
+				158,
+				159,
+				160,
+				161,
+				162,
+				163,
+				164,
+				165,
+				166,
+				167,
+				168,
+				169,
+				170,
+				171,
+				172,
+				173,
+				174,
+				175,
+				176,
+				177,
+				178,
+				179,
+				180,
+				181,
+				182,
+				183,
+				184,
+				185,
+				186,
+				187,
+				188,
+				189,
+				190,
+				191,
+				192,
+				193,
+				194,
+				195,
+				196,
+				197,
+				198,
+				199,
+				200,
+				201,
+				202,
+				203,
+				204,
+				205,
+				206,
+				207,
+				208,
+				209,
+				210,
+				211,
+				212,
+				213,
+				214,
+				215,
+				216,
+				217,
+				218,
+				219,
+				220,
+				221,
+				222,
+				223,
+				224,
+				225,
+				226,
+				227,
+				228,
+				229,
+				230,
+				231,
+				232,
+				233,
+				234
+			]
+		},
+		{
+			"name" : "auxiliary",
+			"sourceIndexes" : 
+			[
+				235,
+				236,
+				237,
+				238,
+				239,
+				240,
+				241,
+				242,
+				243,
+				244,
+				245,
+				246,
+				247,
+				248,
+				249,
+				250,
+				251,
+				252,
+				253,
+				254,
+				255,
+				256,
+				257,
+				258,
+				259,
+				260,
+				261,
+				262,
+				263
+			]
+		},
+		{
+			"name" : "staging",
+			"sourceIndexes" : 
+			[
+				264,
+				265,
+				266,
+				267,
+				268,
+				269,
+				270,
+				271
+			]
+		},
+		{
+			"name" : "3rdparty\\pdfium",
+			"sourceIndexes" : 
+			[
+				272,
+				273,
+				274,
+				275,
+				276,
+				277,
+				278,
+				279
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/podofo.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "cmake-build-debug/deps/podofo-0.10.3/src/podofo/podofo_config.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "deps/podofo-0.10.3/src/podofo/podofo.rc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAcroForm.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAcroForm.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAction.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAction.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAnnotation.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAnnotation.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAnnotationActionBase.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAnnotationActionBase.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAnnotationCollection.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAnnotationCollection.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAnnotationWidget.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAnnotationWidget.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAnnotation_Types.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfAnnotation_Types.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfArray.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfArray.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfButton.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfButton.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCIDToGIDMap.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCIDToGIDMap.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCMapEncoding.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCMapEncoding.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCanvas.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCanvas.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCanvasInputDevice.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCanvasInputDevice.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCatalog.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCatalog.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCharCodeMap.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCharCodeMap.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCheckBox.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCheckBox.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfChoiceField.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfChoiceField.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfColor.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfColor.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfComboBox.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfComboBox.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCommon.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfCommon.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfContentStreamOperators.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfContentStreamReader.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfContentStreamReader.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfContents.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfContents.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfData.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfData.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDataContainer.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDataContainer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDataProvider.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDataProvider.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDate.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDate.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDeclarations.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDestination.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDestination.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDictionary.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDictionary.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDifferenceEncoding.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDifferenceEncoding.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDocument.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfDocument.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfElement.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfElement.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncoding.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncoding.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncodingCommon.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncodingCommon.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncodingFactory.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncodingFactory.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncodingMap.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncodingMap.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncodingMapFactory.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncodingMapFactory.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncodingShim.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncodingShim.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncrypt.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfEncrypt.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfError.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfError.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfExtGState.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfExtGState.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfExtension.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfExtension.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfField.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfField.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFieldChildrenCollection.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFieldChildrenCollection.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFileSpec.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFileSpec.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFilter.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFilter.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFont.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFont.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontBuiltinEncoding.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontCID.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontCID.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontCIDTrueType.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontCIDTrueType.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontCIDType1.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontCIDType1.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontFactory.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontManager.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontManager.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontMetrics.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontMetrics.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontMetricsFreetype.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontMetricsFreetype.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontMetricsObject.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontMetricsObject.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontMetricsStandard14.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontMetricsStandard14.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontObject.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontObject.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontSimple.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontSimple.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontTrueType.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontTrueType.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontTrueTypeSubset.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontTrueTypeSubset.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontType1.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontType1.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontType3.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfFontType3.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfGraphicsState.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfIdentityEncoding.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfIdentityEncoding.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfImage.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfImage.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfImmediateWriter.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfImmediateWriter.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfIndirectObjectList.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfIndirectObjectList.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfInfo.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfInfo.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfListBox.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfListBox.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfMath.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfMath.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfMemDocument.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfMemDocument.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfMemoryObjectStream.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfMemoryObjectStream.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfMetadata.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfMetadata.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfName.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfName.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfNameTree.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfNameTree.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfObject.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfObject.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfObjectStream.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfObjectStream.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfObjectStreamParser.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfObjectStreamParser.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfObjectStreamProvider.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfOperatorUtils.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfOperatorUtils.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfOutlines.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfOutlines.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPage.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPage.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPageCollection.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPageCollection.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPage_TextExtraction.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPainter.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPainter.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPainterPath.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPainterPath.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPainterTextObject.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPainter_Operators.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfParser.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfParser.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfParserObject.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfParserObject.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPostScriptTokenizer.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPostScriptTokenizer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPredefinedEncoding.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPredefinedEncoding.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPushButton.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfPushButton.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfRadioButton.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfRadioButton.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfReference.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfReference.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfResources.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfResources.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfSignature.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfSignature.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfSigner.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfSigner.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfStatefulEncrypt.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfStatefulEncrypt.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfStreamedDocument.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfStreamedDocument.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfStreamedObjectStream.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfStreamedObjectStream.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfString.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfString.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfStringStream.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfStringStream.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfTextBox.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfTextBox.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfTextState.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfTokenizer.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfTokenizer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfTrailer.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfTrailer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfVariant.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfVariant.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfVariantStack.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfVariantStack.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfWriter.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfWriter.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXMPMetadata.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXMPMetadata.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXMPPacket.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXMPPacket.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXObject.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXObject.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXObjectForm.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXObjectForm.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXObjectPostScript.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXObjectPostScript.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXRef.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXRef.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXRefEntry.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXRefEntry.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXRefStream.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXRefStream.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXRefStreamParserObject.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/main/PdfXRefStreamParserObject.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/EnumFlags.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/InputDevice.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/InputDevice.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/InputStream.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/InputStream.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/MathBase.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/Matrix.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/Matrix.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/OutputDevice.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/OutputDevice.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/OutputStream.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/OutputStream.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/Rect.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/Rect.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/StateStack.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/StreamDevice.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/StreamDevice.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/StreamDeviceBase.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/StreamDeviceBase.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/Vector2.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/Vector2.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/Version.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/basecompat.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/basedefs.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/baseincludes.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/basetypes.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/nullable.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/span.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/auxiliary/span.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/staging/PdfFunction.cpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/staging/PdfFunction.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/staging/PdfPainterExtensions.cpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/staging/PdfPainterExtensions.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/staging/PdfShadingPattern.cpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/staging/PdfShadingPattern.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/src/podofo/staging/PdfTilingPattern.cpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/src/podofo/staging/PdfTilingPattern.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/3rdparty/pdfium/LICENSE",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/3rdparty/pdfium/core/fxcodec/fax/faxmodule.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/3rdparty/pdfium/core/fxcodec/fax/faxmodule.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "deps/podofo-0.10.3/3rdparty/pdfium/core/fxcodec/scanlinedecoder.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/3rdparty/pdfium/core/fxcodec/scanlinedecoder.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/3rdparty/pdfium/core/fxcrt/pauseindicator_iface.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/3rdparty/pdfium/pdfium_shim.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 2,
+			"path" : "deps/podofo-0.10.3/3rdparty/pdfium/third_party/base/span.h",
+			"sourceGroupIndex" : 4
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

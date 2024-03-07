@@ -1,0 +1,38 @@
+E:\CLion2023\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=E:/CLion2023/bin/ninja/win/x64/ninja.exe -DCMAKE_TOOLCHAIN_FILE=C:\Users\Andrew\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake --profiling-format=google-trace --profiling-output=CMakeFiles\clion-event-trace.json -G Ninja -S "E:\Programming\C++ Projects\SchemaScan" -B "E:\Programming\C++ Projects\SchemaScan\cmake-build-debug-event-trace"
+-- The C compiler identification is GNU 13.1.0
+-- The CXX compiler identification is GNU 13.1.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: E:/CLion2023/bin/mingw/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: E:/CLion2023/bin/mingw/bin/g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Binary output directory is "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug-event-trace/target"
+Will install libraries to C:/Program Files (x86)/SchemaScan/lib
+Using gcc/clang specific compiler options
+-- Found ZLIB: optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/zlib.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/zlibd.lib (found version "1.3.1")  
+Found zlib headers in C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include, library at optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/zlib.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/zlibd.lib
+-- Found OpenSSL: C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/libcrypto.lib (found version "3.2.1")  
+OPENSSL_LIBRARIES: C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/libssl.lib;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/libcrypto.lib
+-- Could NOT find Libidn (missing: LIBIDN_LIBRARY LIBIDN_INCLUDE_DIR) 
+Libidn not found. AES-256 Encryption support will be disabled
+-- Found JPEG: optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/jpeg.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/jpeg.lib (found version "62") 
+Found libjpeg headers in C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include, library at optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/jpeg.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/jpeg.lib
+-- Found TIFF: optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/tiff.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/tiffd.lib (found version "4.6.0")  
+Found libtiff headers in C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include, library at optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/tiff.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/tiffd.lib
+-- Found PNG: optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/libpng16.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/libpng16d.lib (found version "1.6.40") 
+Found LibPng headers in C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include, library at optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/libpng16.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/libpng16d.lib;optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/zlib.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/zlibd.lib
+Found freetype library at optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/freetype.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib, headers C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include
+-- Could NOT find Fontconfig (missing: Fontconfig_LIBRARY Fontconfig_INCLUDE_DIR) 
+Enabled Windows GDI API
+-- Found Iconv: C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/iconv.lib (found version "1.17") 
+Found libxml2 library at debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/libxml2.lib;optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/libxml2.lib;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/iconv.lib;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/charset.lib, headers C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include/libxml2;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include
+Building shared podofo library
+Pkg-config not found. No pkg-config file will be created.
+-- Configuring done (8.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: E:/Programming/C++ Projects/SchemaScan/cmake-build-debug-event-trace

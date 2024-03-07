@@ -11,11 +11,7 @@
  */
 Schematic::Schematic(const std::string &fpath) {
     if (std::filesystem::path(fpath).extension() == ".pdf") {
-        this->path_ = fpath;
-        this->setHash();
-        this->parsePages();
-        this->setInfo();
-        this->setFileName();
+        this->setup(fpath);
     }
     else {
         std::cerr << "Incorrect file path or type, cannot create Schematic object from: " << fpath << "\n";
@@ -29,15 +25,27 @@ Schematic::~Schematic() {
 }
 
 /**
+ * Setup function for a Schematic object. Sets private class members like the file path, the hash, file name, etc.
+ * Additionally calls parsePages() to parse all of the pages in the .pdf
+ * @param fpath The absolute file path to a schematic
+ */
+void Schematic::setup(const std::string &fpath) {
+    this->path_ = fpath;
+    this->setHash();
+    this->setInfo();
+    this->setFileName();
+    this->parsePages();
+}
+
+/**
  * Parses the .pdf file contained at the path that the Schematic object was created with (path_). Reads the text one
  *      page at a time, and adds the string representation to the Schematic object's parsed_pages_ vector.
  * Utilizes the PoDoFo library
- * @return void
  */
 void Schematic::parsePages() {
     PoDoFo::PdfMemDocument document;
     document.Load(this->path_);
-    PoDoFo::PdfPageCollection &pages = document.GetPages();
+    auto &pages = document.GetPages();
     for (int i = 0; i < pages.GetCount(); ++i) {
         PoDoFo::PdfPage &page = pages.GetPageAt(i);
         std::vector<PoDoFo::PdfTextEntry> entries;

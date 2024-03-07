@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/SchemaSearch")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/SchemaScan")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,22 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/deps/hashlib2plus/cmake_install.cmake")
+  include("E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/SchemaScanLib/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/SchemaScanConsole/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/SchemaScanGUI/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/deps/podofo-0.10.3/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

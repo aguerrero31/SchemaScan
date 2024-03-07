@@ -3,12 +3,12 @@
 //
 
 #include <podofo/podofo.h>
+#include <hashlibpp.h>
 #include <memory>
 #include <iostream>
 #include <filesystem>
 #include <stdexcept>
-#include "trunk/src/hashlibpp.h"
-#include "podofo/main/PdfInfo.h"
+#include <vector>
 
 #ifndef SCHEMASEARCH_SCHEMATIC_H
 #define SCHEMASEARCH_SCHEMATIC_H
@@ -29,10 +29,11 @@ private:
     // Class Members
     std::string file_name_;
     std::string path_;
-    unsigned int page_count_;
+    unsigned int page_count_ = 0;
     std::string md5_hash_;
     std::vector<std::string> parsed_pages_;
     // Functions
+    void setup(const std::string &fpath);
     void setHash();
     void parsePages();
     void setInfo();

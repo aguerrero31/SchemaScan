@@ -1,0 +1,5 @@
+if(EXISTS "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/deps/podofo-0.10.3/test/unit/podofo-unit_tests-b12d07c.cmake")
+  include("E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/deps/podofo-0.10.3/test/unit/podofo-unit_tests-b12d07c.cmake")
+else()
+  add_test(podofo-unit_NOT_BUILT-b12d07c podofo-unit_NOT_BUILT-b12d07c)
+endif()

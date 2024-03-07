@@ -1,3 +1,8 @@
 # ninja log v5
-0	150	7295564284497781	build.ninja	1d21eddb9cd96e03
+1	2727	7315454048041609	build.ninja	fc11f6752fc88889
+5	1239	7315452190016300	SchemaScanConsole/CMakeFiles/SchemaScanConsole.dir/SchemaScanConsole.cpp.obj	39bb5711c58d5eb3
 982	1531	7294739085640611	SchemaSearch.exe	397216fcc34bfc3
+15	673	7315403585706355	PoDoFo/src/podofo/CMakeFiles/podofo_shared.dir/podofo.rc.obj	22417064f8c3eda5
+6	203	7314574995024607	hashlib2plus/libhashlib2plus.a	149a2dd07072f7e5
+11	254	7295728046357043	SchemaScanLib/libSchemaScanLib.a	402f9b54efc82f6f
+10	3185	7315403610779298	PoDoFo/src/podofo/CMakeFiles/podofo_shared.dir/main/PdfAcroForm.cpp.obj	4f3c16f38f662252
