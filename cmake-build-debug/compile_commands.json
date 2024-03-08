@@ -1,0 +1,74 @@
+[
+{
+  "directory": "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug",
+  "command": "E:\\CLion2023\\bin\\mingw\\bin\\g++.exe -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src\" -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib\" -isystem \"E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/include\" -g -std=gnu++23 -fdiagnostics-color=always -o SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\Schematic.cpp.obj -c \"E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\Schematic.cpp\"",
+  "file": "E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\Schematic.cpp",
+  "output": "SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\Schematic.cpp.obj"
+},
+{
+  "directory": "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug",
+  "command": "E:\\CLion2023\\bin\\mingw\\bin\\g++.exe -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src\" -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib\" -isystem \"E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/include\" -g -std=gnu++23 -fdiagnostics-color=always -o SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_md5.cpp.obj -c \"E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_md5.cpp\"",
+  "file": "E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_md5.cpp",
+  "output": "SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_md5.cpp.obj"
+},
+{
+  "directory": "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug",
+  "command": "E:\\CLion2023\\bin\\mingw\\bin\\g++.exe -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src\" -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib\" -isystem \"E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/include\" -g -std=gnu++23 -fdiagnostics-color=always -o SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_md5wrapper.cpp.obj -c \"E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_md5wrapper.cpp\"",
+  "file": "E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_md5wrapper.cpp",
+  "output": "SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_md5wrapper.cpp.obj"
+},
+{
+  "directory": "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug",
+  "command": "E:\\CLion2023\\bin\\mingw\\bin\\g++.exe -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src\" -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib\" -isystem \"E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/include\" -g -std=gnu++23 -fdiagnostics-color=always -o SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha1.cpp.obj -c \"E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha1.cpp\"",
+  "file": "E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha1.cpp",
+  "output": "SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha1.cpp.obj"
+},
+{
+  "directory": "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug",
+  "command": "E:\\CLion2023\\bin\\mingw\\bin\\g++.exe -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src\" -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib\" -isystem \"E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/include\" -g -std=gnu++23 -fdiagnostics-color=always -o SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha1wrapper.cpp.obj -c \"E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha1wrapper.cpp\"",
+  "file": "E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha1wrapper.cpp",
+  "output": "SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha1wrapper.cpp.obj"
+},
+{
+  "directory": "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug",
+  "command": "E:\\CLion2023\\bin\\mingw\\bin\\g++.exe -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src\" -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib\" -isystem \"E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/include\" -g -std=gnu++23 -fdiagnostics-color=always -o SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha256.cpp.obj -c \"E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha256.cpp\"",
+  "file": "E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha256.cpp",
+  "output": "SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha256.cpp.obj"
+},
+{
+  "directory": "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug",
+  "command": "E:\\CLion2023\\bin\\mingw\\bin\\g++.exe -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src\" -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib\" -isystem \"E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/include\" -g -std=gnu++23 -fdiagnostics-color=always -o SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha256wrapper.cpp.obj -c \"E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha256wrapper.cpp\"",
+  "file": "E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha256wrapper.cpp",
+  "output": "SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha256wrapper.cpp.obj"
+},
+{
+  "directory": "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug",
+  "command": "E:\\CLion2023\\bin\\mingw\\bin\\g++.exe -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src\" -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib\" -isystem \"E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/include\" -g -std=gnu++23 -fdiagnostics-color=always -o SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha2ext.cpp.obj -c \"E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha2ext.cpp\"",
+  "file": "E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha2ext.cpp",
+  "output": "SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha2ext.cpp.obj"
+},
+{
+  "directory": "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug",
+  "command": "E:\\CLion2023\\bin\\mingw\\bin\\g++.exe -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src\" -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib\" -isystem \"E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/include\" -g -std=gnu++23 -fdiagnostics-color=always -o SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha384wrapper.cpp.obj -c \"E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha384wrapper.cpp\"",
+  "file": "E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha384wrapper.cpp",
+  "output": "SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha384wrapper.cpp.obj"
+},
+{
+  "directory": "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug",
+  "command": "E:\\CLion2023\\bin\\mingw\\bin\\g++.exe -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src\" -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib\" -isystem \"E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/include\" -g -std=gnu++23 -fdiagnostics-color=always -o SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha512wrapper.cpp.obj -c \"E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha512wrapper.cpp\"",
+  "file": "E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_sha512wrapper.cpp",
+  "output": "SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_sha512wrapper.cpp.obj"
+},
+{
+  "directory": "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug",
+  "command": "E:\\CLion2023\\bin\\mingw\\bin\\g++.exe -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src\" -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib\" -isystem \"E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/include\" -g -std=gnu++23 -fdiagnostics-color=always -o SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_wrapperfactory.cpp.obj -c \"E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_wrapperfactory.cpp\"",
+  "file": "E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanLib\\deps\\hashlibpp\\src\\hl_wrapperfactory.cpp",
+  "output": "SchemaScanLib\\CMakeFiles\\SchemaScanLib.dir\\deps\\hashlibpp\\src\\hl_wrapperfactory.cpp.obj"
+},
+{
+  "directory": "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug",
+  "command": "E:\\CLion2023\\bin\\mingw\\bin\\g++.exe -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src\" -I\"E:/Programming/C++ Projects/SchemaScan/SchemaScanLib\" -isystem \"E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/include\" -g -std=gnu++23 -fdiagnostics-color=always -o SchemaScanConsole\\CMakeFiles\\SchemaScanConsole.dir\\SchemaScanConsole.cpp.obj -c \"E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanConsole\\SchemaScanConsole.cpp\"",
+  "file": "E:\\Programming\\C++ Projects\\SchemaScan\\SchemaScanConsole\\SchemaScanConsole.cpp",
+  "output": "SchemaScanConsole\\CMakeFiles\\SchemaScanConsole.dir\\SchemaScanConsole.cpp.obj"
+}
+]

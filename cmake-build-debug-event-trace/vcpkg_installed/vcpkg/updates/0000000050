@@ -1,0 +1,9 @@
+Package: podofo
+Version: 0.10.3
+Depends: freetype, libjpeg-turbo, libpng, libxml2, openssl, tiff, vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 40d51c1bc56a8c78cc5c8be2accbb9c945388b2ed1ff4b7cc21c3acb54030423
+Description: PoDoFo is a library to work with the PDF file format
+Default-Features: fontmanager
+Status: install ok half-installed

@@ -119,7 +119,7 @@ std::string Schematic::getFilePath() const {
  * Getter for the page count (number of pages parsed) of a Schematic object
  * @return An unsigned integer, the page count
  */
-unsigned int Schematic::getPagecount() const {
+unsigned int Schematic::getPageCount() const {
     return this->page_count_;
 }
 

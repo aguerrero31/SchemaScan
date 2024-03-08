@@ -7,8 +7,8 @@ int main(int argc, char* argv[]) {
         std::cout << "Parsing " << schematic.getFileName() << "\n";
         std::cout << "----------------------------------------\n";
         std::cout << "MD5 Hash: " << schematic.getMD5() << "\n";
-        std::cout << "Pages found: " << schematic.getPagecount() << "\n";
-        for (int i = 1; i <= schematic.getPagecount(); ++i) {
+        std::cout << "Pages found: " << schematic.getPageCount() << "\n";
+        for (int i = 1; i <= schematic.getPageCount(); ++i) {
             std::cout << "Page " << i << ": \n";
             std::cout << schematic.getParsedPage(i) << "\n";
         }

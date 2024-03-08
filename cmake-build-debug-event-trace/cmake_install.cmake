@@ -52,11 +52,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("E:/Programming/C++ Projects/SchemaScan/cmake-build-debug-event-trace/SchemaScanGUI/cmake_install.cmake")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("E:/Programming/C++ Projects/SchemaScan/cmake-build-debug-event-trace/deps/podofo-0.10.3/cmake_install.cmake")
-endif()
-
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

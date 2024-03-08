@@ -1,0 +1,11 @@
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/podofo
+
+Name: PoDoFo
+Description: A C++ library to work with the PDF file format
+Version: 0.10.3
+Libs: "-L${libdir}" -lpodofo
+Cflags: "-I${includedir}"
+

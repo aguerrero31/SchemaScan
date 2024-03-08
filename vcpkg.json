@@ -1,0 +1,8 @@
+{
+  "documentation": "https://github.com/microsoft/vcpkg/blob/master/docs/users/manifests.md",
+  "name": "project",
+  "version": "0.1.0",
+  "dependencies": [
+    "podofo"
+  ]
+}

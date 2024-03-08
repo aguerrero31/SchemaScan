@@ -1,0 +1,6 @@
+Package: podofo
+Feature: fontmanager
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enable font manager
+Status: install ok installed

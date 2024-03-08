@@ -1,0 +1,71 @@
+waiting to take filesystem lock on C:\Users\Andrew\.vcpkg-clion\vcpkg\.vcpkg-root...
+Detecting compiler hash for triplet x64-windows...
+The following packages will be built and installed:
+  * brotli:x64-windows@1.1.0#1
+  * bzip2[core,tool]:x64-windows@1.0.8#5
+  * freetype[brotli,bzip2,core,png,zlib]:x64-windows@2.13.2
+  * libiconv:x64-windows@1.17#2
+  * libjpeg-turbo:x64-windows@3.0.2
+  * liblzma:x64-windows@5.4.4
+  * libpng:x64-windows@1.6.40#1
+  * libxml2[core,iconv,lzma,zlib]:x64-windows@2.11.6#1
+  * openssl:x64-windows@3.2.1
+    podofo[core,fontmanager]:x64-windows@0.10.3
+  * tiff[core,jpeg,lzma,zip]:x64-windows@4.6.0#3
+  * vcpkg-cmake:x64-windows@2023-05-04
+  * vcpkg-cmake-config:x64-windows@2022-02-06#1
+  * vcpkg-cmake-get-vars:x64-windows@2023-12-31
+  * zlib:x64-windows@1.3.1
+Additional packages (*) will be modified to complete this operation.
+Restored 15 package(s) from C:\Users\Andrew\AppData\Local\vcpkg\archives in 2 s. Use --debug to see more details.
+Installing 1/15 vcpkg-cmake:x64-windows@2023-05-04...
+Elapsed time to handle vcpkg-cmake:x64-windows: 91.3 ms
+vcpkg-cmake:x64-windows package ABI: c4d54934d136558d231827e720bfba177801d7573243013f7276f6b73c0b8699
+Installing 2/15 zlib:x64-windows@1.3.1...
+Elapsed time to handle zlib:x64-windows: 38.4 ms
+zlib:x64-windows package ABI: 1786e20eb58eec1bf2764d49e234e7134fdc6931a8e8b6fcb0a79a68b5ec3252
+Installing 3/15 vcpkg-cmake-config:x64-windows@2022-02-06#1...
+Elapsed time to handle vcpkg-cmake-config:x64-windows: 5.25 ms
+vcpkg-cmake-config:x64-windows package ABI: 26d69208621097970b5bd2535545bfc84c89e7e4016b5481b114a6411eb3e915
+Installing 4/15 liblzma:x64-windows@5.4.4...
+Elapsed time to handle liblzma:x64-windows: 63.2 ms
+liblzma:x64-windows package ABI: e6a5b785545ad1e9036764ace023b91e558ad2630721ba830e876057d4e20bd0
+Installing 5/15 libjpeg-turbo:x64-windows@3.0.2...
+Elapsed time to handle libjpeg-turbo:x64-windows: 170 ms
+libjpeg-turbo:x64-windows package ABI: 26c06e18625eb0acc8d13166e04411aac8d1d511005238bca64898e8c83e0301
+Installing 6/15 tiff[core,jpeg,lzma,zip]:x64-windows@4.6.0#3...
+Elapsed time to handle tiff:x64-windows: 41.3 ms
+tiff:x64-windows package ABI: b52445f815094487fc2b63864fb7ecae0874c1c43b1341f5b66c7c35123db175
+Installing 7/15 vcpkg-cmake-get-vars:x64-windows@2023-12-31...
+Elapsed time to handle vcpkg-cmake-get-vars:x64-windows: 20.1 ms
+vcpkg-cmake-get-vars:x64-windows package ABI: eb97f4a3e96c094feea56590e5b268ff209f70ba098189f182f8546abcedbc3b
+Installing 8/15 openssl:x64-windows@3.2.1...
+Elapsed time to handle openssl:x64-windows: 843 ms
+openssl:x64-windows package ABI: 51229f7060c68458206416abb7e460c58015ccfc1fee3945e3bbed64c1f387f4
+Installing 9/15 libiconv:x64-windows@1.17#2...
+Elapsed time to handle libiconv:x64-windows: 20.4 ms
+libiconv:x64-windows package ABI: 496dcb3de749fba3ad966077c1197231ed1e9ecfee83b3af677f0cce7f17a02b
+Installing 10/15 libxml2[core,iconv,lzma,zlib]:x64-windows@2.11.6#1...
+Elapsed time to handle libxml2:x64-windows: 72.2 ms
+libxml2:x64-windows package ABI: 949f863fcb6a4adeea6079c80d88ca150b09f73e3ba68840b0d330109768ba2c
+Installing 11/15 libpng:x64-windows@1.6.40#1...
+Elapsed time to handle libpng:x64-windows: 19.5 ms
+libpng:x64-windows package ABI: 033733ba542024b302d30571d185e51880a6ad6153d47cf19a66ae091e939d19
+Installing 12/15 bzip2[core,tool]:x64-windows@1.0.8#5...
+Elapsed time to handle bzip2:x64-windows: 15.1 ms
+bzip2:x64-windows package ABI: bba7ebef4390fab23f57cdea90db25f283c1e957f56b74c93eadb0edddcb1ef0
+Installing 13/15 brotli:x64-windows@1.1.0#1...
+Elapsed time to handle brotli:x64-windows: 41.3 ms
+brotli:x64-windows package ABI: 23baaf257eecb4c6e6e062ba044ceb0a9491932691b5657233034d888e6edf27
+Installing 14/15 freetype[brotli,bzip2,core,png,zlib]:x64-windows@2.13.2...
+Elapsed time to handle freetype:x64-windows: 49.8 ms
+freetype:x64-windows package ABI: f4f145a69597e7c5d269cd901b780a8ca02117c806f772856f8086e77ce86c8c
+Installing 15/15 podofo[core,fontmanager]:x64-windows@0.10.3...
+Elapsed time to handle podofo:x64-windows: 117 ms
+podofo:x64-windows package ABI: 40d51c1bc56a8c78cc5c8be2accbb9c945388b2ed1ff4b7cc21c3acb54030423
+Total install time: 1.6 s
+podofo provides CMake targets:
+
+    find_package(podofo CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE $<IF:$<TARGET_EXISTS:podofo_shared>,podofo_shared,podofo_static>)
+

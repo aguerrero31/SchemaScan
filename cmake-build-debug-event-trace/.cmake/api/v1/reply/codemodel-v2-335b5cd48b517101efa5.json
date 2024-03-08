@@ -1,0 +1,136 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "SchemaScanLib",
+					"jsonFile" : "directory-SchemaScanLib-Debug-62859015d799795849a8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "SchemaScanLib",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "SchemaScanConsole",
+					"jsonFile" : "directory-SchemaScanConsole-Debug-65f464f2fc70062d0e2e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "SchemaScanConsole",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "SchemaScanGUI",
+					"jsonFile" : "directory-SchemaScanGUI-Debug-2b425cb64b0cbda07ce8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "SchemaScanGUI"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						3
+					],
+					"name" : "SchemaScan"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "SchemaScanLib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "SchemaScanConsole",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "SchemaScanConsole::@d741908aeb642cf41d9a",
+					"jsonFile" : "target-SchemaScanConsole-Debug-7492edda8ea906f92fdb.json",
+					"name" : "SchemaScanConsole",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SchemaScanLib::@4893f545954602cf3935",
+					"jsonFile" : "target-SchemaScanLib-Debug-c932366129bb8e3c9543.json",
+					"name" : "SchemaScanLib",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug-event-trace",
+		"source" : "E:/Programming/C++ Projects/SchemaScan"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

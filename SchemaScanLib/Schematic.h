@@ -21,7 +21,7 @@ public:
     // Functions
     std::string getFileName() const;
     std::string getFilePath() const;
-    unsigned int getPagecount() const;
+    unsigned int getPageCount() const;
     std::string getMD5() const;
     std::vector<std::string> getParsedPages() const;
     std::string getParsedPage(unsigned int page) const;

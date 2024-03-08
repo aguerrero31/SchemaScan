@@ -1,4 +1,76 @@
 E:\CLion2023\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=E:/CLion2023/bin/ninja/win/x64/ninja.exe -DCMAKE_TOOLCHAIN_FILE=C:\Users\Andrew\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake -G Ninja -S "E:\Programming\C++ Projects\SchemaScan" -B "E:\Programming\C++ Projects\SchemaScan\cmake-build-debug"
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-windows...
+The following packages will be built and installed:
+  * brotli:x64-windows@1.1.0#1
+  * bzip2[core,tool]:x64-windows@1.0.8#5
+  * freetype[brotli,bzip2,core,png,zlib]:x64-windows@2.13.2
+  * libiconv:x64-windows@1.17#2
+  * libjpeg-turbo:x64-windows@3.0.2
+  * liblzma:x64-windows@5.4.4
+  * libpng:x64-windows@1.6.40#1
+  * libxml2[core,iconv,lzma,zlib]:x64-windows@2.11.6#1
+  * openssl:x64-windows@3.2.1
+    podofo[core,fontmanager]:x64-windows@0.10.3
+  * tiff[core,jpeg,lzma,zip]:x64-windows@4.6.0#3
+  * vcpkg-cmake:x64-windows@2023-05-04
+  * vcpkg-cmake-config:x64-windows@2022-02-06#1
+  * vcpkg-cmake-get-vars:x64-windows@2023-12-31
+  * zlib:x64-windows@1.3.1
+Additional packages (*) will be modified to complete this operation.
+Restored 15 package(s) from C:\Users\Andrew\AppData\Local\vcpkg\archives in 1.9 s. Use --debug to see more details.
+Installing 1/15 vcpkg-cmake:x64-windows@2023-05-04...
+Elapsed time to handle vcpkg-cmake:x64-windows: 7.17 ms
+vcpkg-cmake:x64-windows package ABI: c4d54934d136558d231827e720bfba177801d7573243013f7276f6b73c0b8699
+Installing 2/15 zlib:x64-windows@1.3.1...
+Elapsed time to handle zlib:x64-windows: 17.6 ms
+zlib:x64-windows package ABI: 1786e20eb58eec1bf2764d49e234e7134fdc6931a8e8b6fcb0a79a68b5ec3252
+Installing 3/15 vcpkg-cmake-config:x64-windows@2022-02-06#1...
+Elapsed time to handle vcpkg-cmake-config:x64-windows: 10.2 ms
+vcpkg-cmake-config:x64-windows package ABI: 26d69208621097970b5bd2535545bfc84c89e7e4016b5481b114a6411eb3e915
+Installing 4/15 liblzma:x64-windows@5.4.4...
+Elapsed time to handle liblzma:x64-windows: 27.5 ms
+liblzma:x64-windows package ABI: e6a5b785545ad1e9036764ace023b91e558ad2630721ba830e876057d4e20bd0
+Installing 5/15 libjpeg-turbo:x64-windows@3.0.2...
+Elapsed time to handle libjpeg-turbo:x64-windows: 31.6 ms
+libjpeg-turbo:x64-windows package ABI: 26c06e18625eb0acc8d13166e04411aac8d1d511005238bca64898e8c83e0301
+Installing 6/15 tiff[core,jpeg,lzma,zip]:x64-windows@4.6.0#3...
+Elapsed time to handle tiff:x64-windows: 22.5 ms
+tiff:x64-windows package ABI: b52445f815094487fc2b63864fb7ecae0874c1c43b1341f5b66c7c35123db175
+Installing 7/15 vcpkg-cmake-get-vars:x64-windows@2023-12-31...
+Elapsed time to handle vcpkg-cmake-get-vars:x64-windows: 12.6 ms
+vcpkg-cmake-get-vars:x64-windows package ABI: eb97f4a3e96c094feea56590e5b268ff209f70ba098189f182f8546abcedbc3b
+Installing 8/15 openssl:x64-windows@3.2.1...
+Elapsed time to handle openssl:x64-windows: 125 ms
+openssl:x64-windows package ABI: 51229f7060c68458206416abb7e460c58015ccfc1fee3945e3bbed64c1f387f4
+Installing 9/15 libiconv:x64-windows@1.17#2...
+Elapsed time to handle libiconv:x64-windows: 30.5 ms
+libiconv:x64-windows package ABI: 496dcb3de749fba3ad966077c1197231ed1e9ecfee83b3af677f0cce7f17a02b
+Installing 10/15 libxml2[core,iconv,lzma,zlib]:x64-windows@2.11.6#1...
+Elapsed time to handle libxml2:x64-windows: 73.5 ms
+libxml2:x64-windows package ABI: 949f863fcb6a4adeea6079c80d88ca150b09f73e3ba68840b0d330109768ba2c
+Installing 11/15 libpng:x64-windows@1.6.40#1...
+Elapsed time to handle libpng:x64-windows: 26.5 ms
+libpng:x64-windows package ABI: 033733ba542024b302d30571d185e51880a6ad6153d47cf19a66ae091e939d19
+Installing 12/15 bzip2[core,tool]:x64-windows@1.0.8#5...
+Elapsed time to handle bzip2:x64-windows: 13.9 ms
+bzip2:x64-windows package ABI: bba7ebef4390fab23f57cdea90db25f283c1e957f56b74c93eadb0edddcb1ef0
+Installing 13/15 brotli:x64-windows@1.1.0#1...
+Elapsed time to handle brotli:x64-windows: 36.9 ms
+brotli:x64-windows package ABI: 23baaf257eecb4c6e6e062ba044ceb0a9491932691b5657233034d888e6edf27
+Installing 14/15 freetype[brotli,bzip2,core,png,zlib]:x64-windows@2.13.2...
+Elapsed time to handle freetype:x64-windows: 50.5 ms
+freetype:x64-windows package ABI: f4f145a69597e7c5d269cd901b780a8ca02117c806f772856f8086e77ce86c8c
+Installing 15/15 podofo[core,fontmanager]:x64-windows@0.10.3...
+Elapsed time to handle podofo:x64-windows: 125 ms
+podofo:x64-windows package ABI: 40d51c1bc56a8c78cc5c8be2accbb9c945388b2ed1ff4b7cc21c3acb54030423
+Total install time: 611 ms
+podofo provides CMake targets:
+
+    find_package(podofo CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE $<IF:$<TARGET_EXISTS:podofo_shared>,podofo_shared,podofo_static>)
+
+-- Running vcpkg install - done
 -- The C compiler identification is GNU 13.1.0
 -- The CXX compiler identification is GNU 13.1.0
 -- Detecting C compiler ABI info
@@ -11,28 +83,12 @@ E:\CLion2023\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MA
 -- Check for working CXX compiler: E:/CLion2023/bin/mingw/bin/g++.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Binary output directory is "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/target"
-Will install libraries to C:/Program Files (x86)/SchemaScan/lib
-Using gcc/clang specific compiler options
--- Found ZLIB: optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/zlib.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/zlibd.lib (found version "1.3.1")  
-Found zlib headers in C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include, library at optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/zlib.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/zlibd.lib
--- Found OpenSSL: C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/libcrypto.lib (found version "3.2.1")  
-OPENSSL_LIBRARIES: C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/libssl.lib;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/libcrypto.lib
--- Could NOT find Libidn (missing: LIBIDN_LIBRARY LIBIDN_INCLUDE_DIR) 
-Libidn not found. AES-256 Encryption support will be disabled
--- Found JPEG: optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/jpeg.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/jpeg.lib (found version "62") 
-Found libjpeg headers in C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include, library at optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/jpeg.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/jpeg.lib
--- Found TIFF: optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/tiff.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/tiffd.lib (found version "4.6.0")  
-Found libtiff headers in C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include, library at optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/tiff.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/tiffd.lib
--- Found PNG: optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/libpng16.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/libpng16d.lib (found version "1.6.40") 
-Found LibPng headers in C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include, library at optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/libpng16.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/libpng16d.lib;optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/zlib.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/zlibd.lib
-Found freetype library at optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/freetype.lib;debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib, headers C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include
--- Could NOT find Fontconfig (missing: Fontconfig_LIBRARY Fontconfig_INCLUDE_DIR) 
-Enabled Windows GDI API
--- Found Iconv: C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/iconv.lib (found version "1.17") 
-Found libxml2 library at debug;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/libxml2.lib;optimized;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/lib/libxml2.lib;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/iconv.lib;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/charset.lib, headers C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include/libxml2;C:/Users/Andrew/.vcpkg-clion/vcpkg/installed/x64-windows/include
-Building shared podofo library
-Pkg-config not found. No pkg-config file will be created.
--- Configuring done (8.2s)
--- Generating done (0.1s)
+-- Found ZLIB: optimized;E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/lib/zlib.lib;debug;E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/debug/lib/zlibd.lib (found version "1.3.1")  
+-- Found JPEG: optimized;E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/lib/jpeg.lib;debug;E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/debug/lib/jpeg.lib (found version "62") 
+-- Found Iconv: E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/debug/lib/iconv.lib (found version "1.17") 
+-- Found OpenSSL: E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/debug/lib/libcrypto.lib (found version "3.2.1")  
+-- Found PNG: optimized;E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/lib/libpng16.lib;debug;E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/debug/lib/libpng16d.lib (found version "1.6.40") 
+-- Found TIFF: optimized;E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/lib/tiff.lib;debug;E:/Programming/C++ Projects/SchemaScan/cmake-build-debug/vcpkg_installed/x64-windows/debug/lib/tiffd.lib (found version "4.6.0")  
+-- Configuring done (12.4s)
+-- Generating done (0.0s)
 -- Build files have been written to: E:/Programming/C++ Projects/SchemaScan/cmake-build-debug

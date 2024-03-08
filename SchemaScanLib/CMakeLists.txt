@@ -1,17 +1,40 @@
-add_library(SchemaScanLib "")
+project(SchemaScanLib
+        LANGUAGES C CXX
+        VERSION 0.0.1
+)
 
-target_sources(SchemaScanLib
+find_package(podofo CONFIG REQUIRED)
+
+add_library(${PROJECT_NAME} "")
+
+file(GLOB_RECURSE
+        schema_scan_lib_sources
+            CONFIGURE_DEPENDS
+                "${CMAKE_CURRENT_SOURCE_DIR}/SchemaScanLib.h"
+                "${CMAKE_CURRENT_SOURCE_DIR}/Schematic.hpp"
+                "${CMAKE_CURRENT_SOURCE_DIR}/Schematic.cpp"
+                "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlibpp/src/*.[hc]pp"
+)
+
+target_sources(${PROJECT_NAME}
         PRIVATE
-            ${CMAKE_CURRENT_LIST_DIR}/Schematic.cpp
-        PUBLIC
-            ${CMAKE_CURRENT_LIST_DIR}/Schematic.h
+            ${schema_scan_lib_sources}
 )
 
 target_include_directories(SchemaScanLib
         PUBLIC
-            ${CMAKE_CURRENT_LIST_DIR}
-            ${PROJECT_SOURCE_DIR}/deps/hashlib2plus/trunk/src hashlib2plus
-            ${PROJECT_SOURCE_DIR}/deps/podofo-0.10.3/src
+            "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlibpp/src/"
+            "${PODOFO_INCLUDE_DIR}"
+            "${CMAKE_CURRENT_SOURCE_DIR}"
 )
 
-target_link_libraries(SchemaScanLib PUBLIC hashlib2plus podofo)
+target_include_directories(${PROJECT_NAME}
+        PUBLIC
+            "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlibpp/src/"
+            "${PODOFO_INCLUDE_DIR}"
+            "${CMAKE_CURRENT_SOURCE_DIR}"
+)
+
+target_link_libraries(${PROJECT_NAME}
+        PUBLIC $<IF:$<TARGET_EXISTS:podofo_shared>,podofo_shared,podofo_static>
+)

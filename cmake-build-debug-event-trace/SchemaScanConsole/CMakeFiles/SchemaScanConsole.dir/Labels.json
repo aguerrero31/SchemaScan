@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "E:/Programming/C++ Projects/SchemaScan/SchemaScanConsole/SchemaScanConsole.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"ON"
+		],
+		"name" : "SchemaScanConsole"
+	}
+}

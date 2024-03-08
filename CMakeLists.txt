@@ -1,27 +1,27 @@
 cmake_minimum_required(VERSION 3.27)
-project(SchemaScan)
+
+project(SchemaScan
+        LANGUAGES C CXX
+        VERSION 0.0.1
+)
+
+set(CMAKE_MESSAGE_LOG_LEVEL STATUS)
+
+list(APPEND CMAKE_MODULE_PATH
+        "${CMAKE_CURRENT_SOURCE_DIR}/cmake"
+)
+
+#include(vcpkg-init)
 
 set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_EXTENSIONS ON)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_COLOR_DIAGNOSTICS ON)
+set(CMAKE_DIRECTORY_LABELS ON)
 
-## Set a default build type if none was specified
-## Based on: https://github.com/openchemistry/tomviz/blob/master/cmake/BuildType.cmake
-#set(DEFAULT_BUILD_TYPE "Release")
-#if(EXISTS "${CMAKE_SOURCE_DIR}/.git")
-#    set(DEFAULT_BUILD_TYPE "Debug")
-#endif()
-#if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
-#    message(STATUS "Setting build type to '${DEFAULT_BUILD_TYPE}' as none was specified.")
-#    set(CMAKE_BUILD_TYPE "${DEFAULT_BUILD_TYPE}" CACHE STRING "Choose the type of build." FORCE)
-#    # Set the possible values of build type for cmake-gui
-#    set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
-#endif()
-#
-#if(WIN32) # Install dlls in the same directory as the executable on Windows
-#    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
-#    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
-#endif()
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/SchemaScanLib)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/SchemaScanConsole)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/SchemaScanGUI)
 
-add_subdirectory(SchemaScanLib)
-add_subdirectory(SchemaScanConsole)
-add_subdirectory(SchemaScanGUI)
-add_subdirectory(deps/podofo-0.10.3)
+#include(cmake-utils)
