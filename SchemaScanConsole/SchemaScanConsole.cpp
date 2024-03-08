@@ -3,7 +3,12 @@
 
 int main(int argc, char* argv[]) {
     try {
-        Schematic schematic(argv[0]);
+        std::string path;
+        std::cout << "Starting...\n";
+        path = R"(E:\Electronics Repair\Schematics & BoardViews\MSI V3XX Schematics\V301\V301_11(00017967)_Decrypt.pdf)";
+//        std::cout << "Please enter the full path to the schematic: \n";
+//        std::cin >> path;
+        Schematic schematic(path);
         std::cout << "Parsing " << schematic.getFileName() << "\n";
         std::cout << "----------------------------------------\n";
         std::cout << "MD5 Hash: " << schematic.getMD5() << "\n";
