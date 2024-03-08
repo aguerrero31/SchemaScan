@@ -4,6 +4,8 @@
 
 #include "Schematic.h"
 
+#include <hashlibpp.h>
+
 /**
  * Default constructor for the Schematic class
  * @param fpath The absolute file path to a schematic
@@ -83,7 +85,7 @@ void Schematic::setHash() {
  * TODO: ADD MORE FUNCTIONALITY OR CHANGE TO setPageCount()
  */
 void Schematic::setInfo() {
-    PoDoFo::PdfMemDocument document;
+    PoDoFo::PdfMemDocument document{};
     document.Load(this->path_);
     std::vector<PoDoFo::PdfTextEntry> entries;
     PoDoFo::PdfPageCollection &pages = document.GetPages();
