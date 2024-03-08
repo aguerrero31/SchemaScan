@@ -2,29 +2,28 @@
 // Created by Andrew on 2/12/2024.
 //
 
-#include <podofo/podofo.h>
-#include <hashlibpp.h>
+#pragma once
+
 #include <memory>
 #include <iostream>
 #include <filesystem>
 #include <stdexcept>
 #include <vector>
+#include <string>
 
-#ifndef SCHEMASEARCH_SCHEMATIC_H
-#define SCHEMASEARCH_SCHEMATIC_H
-
+#include <podofo/podofo.h>
 
 class Schematic {
 public:
-    Schematic(const std::string &fpath);
+    explicit Schematic(const std::string &fpath);
     ~Schematic();
     // Functions
-    std::string getFileName() const;
-    std::string getFilePath() const;
-    unsigned int getPageCount() const;
-    std::string getMD5() const;
-    std::vector<std::string> getParsedPages() const;
-    std::string getParsedPage(unsigned int page) const;
+    [[nodiscard]] std::string getFileName() const;
+    [[nodiscard]] std::string getFilePath() const;
+    [[nodiscard]] unsigned int getPageCount() const;
+    [[nodiscard]] std::string getMD5() const;
+    [[nodiscard]] std::vector<std::string> getParsedPages() const;
+    [[nodiscard]] std::string getParsedPage(unsigned int page) const;
 private:
     // Class Members
     std::string file_name_;
@@ -39,6 +38,3 @@ private:
     void setInfo();
     void setFileName();
 };
-
-
-#endif //SCHEMASEARCH_SCHEMATIC_H

@@ -1,12 +1,14 @@
+cmake_minimum_required(VERSION 3.27)
+
 project(SchemaScanConsole
-        LANGUAGES C CXX
+    LANGUAGES
+        C CXX
 )
 
 add_executable(${PROJECT_NAME}
-        ${CMAKE_CURRENT_SOURCE_DIR}/SchemaScanConsole.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/SchemaScanConsole.cpp
 )
 
-target_link_libraries(SchemaScanConsole
-        PRIVATE
-            SchemaScanLib
+target_link_libraries(${PROJECT_NAME}
+    PRIVATE SchemaScanLib
 )

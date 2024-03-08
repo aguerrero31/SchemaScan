@@ -1,40 +1,39 @@
+cmake_minimum_required(VERSION 3.27)
+
+set(PODOFO_BUILD_LIB_ONLY ON)
+find_package(podofo CONFIG REQUIRED)
+
 project(SchemaScanLib
         LANGUAGES C CXX
         VERSION 0.0.1
 )
 
-find_package(podofo CONFIG REQUIRED)
-
-add_library(${PROJECT_NAME} "")
-
-file(GLOB_RECURSE
-        schema_scan_lib_sources
-            CONFIGURE_DEPENDS
-                "${CMAKE_CURRENT_SOURCE_DIR}/SchemaScanLib.h"
-                "${CMAKE_CURRENT_SOURCE_DIR}/Schematic.hpp"
-                "${CMAKE_CURRENT_SOURCE_DIR}/Schematic.cpp"
-                "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlib2plus/src/*.[hc]pp"
+file(GLOB
+    hashlib2plus_sources
+        "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlib2plus/src/*.h"
+        "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlib2plus/src/*.cpp"
 )
 
-target_sources(${PROJECT_NAME}
-        PRIVATE
-            ${schema_scan_lib_sources}
+add_library(${PROJECT_NAME} STATIC
+    "${CMAKE_CURRENT_SOURCE_DIR}/Schematic.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Schematic.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/SchemaScanLib.h"
+    "${hashlib2plus_sources}"
 )
 
-target_include_directories(SchemaScanLib
+if (NOT MSVC)
+    target_compile_options(${PROJECT_NAME}
         PUBLIC
-            "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlib2plus/src/"
-            "${PODOFO_INCLUDE_DIR}"
-            "${CMAKE_CURRENT_SOURCE_DIR}"
-)
+            -Wno-deprecated
+    )
+endif()
 
 target_include_directories(${PROJECT_NAME}
-        PUBLIC
-            "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlib2plus/src/"
-            "${PODOFO_INCLUDE_DIR}"
-            "${CMAKE_CURRENT_SOURCE_DIR}"
+    SYSTEM PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlib2plus/src
 )
 
 target_link_libraries(${PROJECT_NAME}
-        PUBLIC $<IF:$<TARGET_EXISTS:podofo_shared>,podofo_shared,podofo_static>
+    PUBLIC $<IF:$<TARGET_EXISTS:podofo_shared>,podofo_shared,podofo_static>
 )
