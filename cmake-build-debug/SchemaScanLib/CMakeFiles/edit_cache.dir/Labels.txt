@@ -1,3 +1,0 @@
-# Directory labels
- ON
-# Source files and their labels
