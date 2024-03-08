@@ -13,7 +13,7 @@ file(GLOB_RECURSE
                 "${CMAKE_CURRENT_SOURCE_DIR}/SchemaScanLib.h"
                 "${CMAKE_CURRENT_SOURCE_DIR}/Schematic.hpp"
                 "${CMAKE_CURRENT_SOURCE_DIR}/Schematic.cpp"
-                "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlibpp/src/*.[hc]pp"
+                "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlib2plus/src/*.[hc]pp"
 )
 
 target_sources(${PROJECT_NAME}
@@ -23,14 +23,14 @@ target_sources(${PROJECT_NAME}
 
 target_include_directories(SchemaScanLib
         PUBLIC
-            "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlibpp/src/"
+            "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlib2plus/src/"
             "${PODOFO_INCLUDE_DIR}"
             "${CMAKE_CURRENT_SOURCE_DIR}"
 )
 
 target_include_directories(${PROJECT_NAME}
         PUBLIC
-            "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlibpp/src/"
+            "${CMAKE_CURRENT_SOURCE_DIR}/deps/hashlib2plus/src/"
             "${PODOFO_INCLUDE_DIR}"
             "${CMAKE_CURRENT_SOURCE_DIR}"
 )
