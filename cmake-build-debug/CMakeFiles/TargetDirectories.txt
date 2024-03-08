@@ -1,0 +1,10 @@
+E:/Programming/CppProjects/SchemaScan/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/Programming/CppProjects/SchemaScan/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+E:/Programming/CppProjects/SchemaScan/cmake-build-debug/SchemaScanLib/CMakeFiles/SchemaScanLib.dir
+E:/Programming/CppProjects/SchemaScan/cmake-build-debug/SchemaScanLib/CMakeFiles/edit_cache.dir
+E:/Programming/CppProjects/SchemaScan/cmake-build-debug/SchemaScanLib/CMakeFiles/rebuild_cache.dir
+E:/Programming/CppProjects/SchemaScan/cmake-build-debug/SchemaScanConsole/CMakeFiles/SchemaScanConsole.dir
+E:/Programming/CppProjects/SchemaScan/cmake-build-debug/SchemaScanConsole/CMakeFiles/edit_cache.dir
+E:/Programming/CppProjects/SchemaScan/cmake-build-debug/SchemaScanConsole/CMakeFiles/rebuild_cache.dir
+E:/Programming/CppProjects/SchemaScan/cmake-build-debug/SchemaScanGUI/CMakeFiles/edit_cache.dir
+E:/Programming/CppProjects/SchemaScan/cmake-build-debug/SchemaScanGUI/CMakeFiles/rebuild_cache.dir

@@ -1,4 +1,4 @@
-# Install script for directory: E:/Programming/C++ Projects/SchemaScan/SchemaScanLib
+# Install script for directory: E:/Programming/CppProjects/SchemaScan/SchemaScanLib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

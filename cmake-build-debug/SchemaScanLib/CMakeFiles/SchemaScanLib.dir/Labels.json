@@ -2,40 +2,40 @@
 	"sources" : 
 	[
 		{
-			"file" : "E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/SchemaScanLib.h"
+			"file" : "E:/Programming/CppProjects/SchemaScan/SchemaScanLib/SchemaScanLib.h"
 		},
 		{
-			"file" : "E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/Schematic.cpp"
+			"file" : "E:/Programming/CppProjects/SchemaScan/SchemaScanLib/Schematic.cpp"
 		},
 		{
-			"file" : "E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_md5.cpp"
+			"file" : "E:/Programming/CppProjects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_md5.cpp"
 		},
 		{
-			"file" : "E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_md5wrapper.cpp"
+			"file" : "E:/Programming/CppProjects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_md5wrapper.cpp"
 		},
 		{
-			"file" : "E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha1.cpp"
+			"file" : "E:/Programming/CppProjects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha1.cpp"
 		},
 		{
-			"file" : "E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha1wrapper.cpp"
+			"file" : "E:/Programming/CppProjects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha1wrapper.cpp"
 		},
 		{
-			"file" : "E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha256.cpp"
+			"file" : "E:/Programming/CppProjects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha256.cpp"
 		},
 		{
-			"file" : "E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha256wrapper.cpp"
+			"file" : "E:/Programming/CppProjects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha256wrapper.cpp"
 		},
 		{
-			"file" : "E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha2ext.cpp"
+			"file" : "E:/Programming/CppProjects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha2ext.cpp"
 		},
 		{
-			"file" : "E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha384wrapper.cpp"
+			"file" : "E:/Programming/CppProjects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha384wrapper.cpp"
 		},
 		{
-			"file" : "E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha512wrapper.cpp"
+			"file" : "E:/Programming/CppProjects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_sha512wrapper.cpp"
 		},
 		{
-			"file" : "E:/Programming/C++ Projects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_wrapperfactory.cpp"
+			"file" : "E:/Programming/CppProjects/SchemaScan/SchemaScanLib/deps/hashlibpp/src/hl_wrapperfactory.cpp"
 		}
 	],
 	"target" : 

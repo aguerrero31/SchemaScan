@@ -1,4 +1,4 @@
-# Install script for directory: E:/Programming/C++ Projects/SchemaScan
+# Install script for directory: E:/Programming/CppProjects/SchemaScan
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,17 +39,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("E:/Programming/C++ Projects/SchemaScan/cmake-build-debug-event-trace/SchemaScanLib/cmake_install.cmake")
+  include("E:/Programming/CppProjects/SchemaScan/cmake-build-debug-event-trace/SchemaScanLib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("E:/Programming/C++ Projects/SchemaScan/cmake-build-debug-event-trace/SchemaScanConsole/cmake_install.cmake")
+  include("E:/Programming/CppProjects/SchemaScan/cmake-build-debug-event-trace/SchemaScanConsole/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("E:/Programming/C++ Projects/SchemaScan/cmake-build-debug-event-trace/SchemaScanGUI/cmake_install.cmake")
+  include("E:/Programming/CppProjects/SchemaScan/cmake-build-debug-event-trace/SchemaScanGUI/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/Programming/C++ Projects/SchemaScan/cmake-build-debug-event-trace/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/Programming/CppProjects/SchemaScan/cmake-build-debug-event-trace/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
