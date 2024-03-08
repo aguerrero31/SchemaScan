@@ -1,4 +1,0 @@
-# Directory labels
- ON
-# Source files and their labels
-E:/Programming/CppProjects/SchemaScan/SchemaScanConsole/SchemaScanConsole.cpp
