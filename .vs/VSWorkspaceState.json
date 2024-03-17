@@ -1,0 +1,22 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      ".out\\build\\msvc-debug",
+      ".out\\install\\msvc-debug",
+      ".out\\build\\msvc-release",
+      ".out\\install\\msvc-release",
+      ".out\\build\\msvc-relwdebinfo",
+      ".out\\install\\msvc-relwdebinfo",
+      ".out\\build\\clang-debug",
+      ".out\\install\\clang-debug",
+      ".out\\build\\clang-release",
+      ".out\\install\\clang-release",
+      ".out\\build\\clang-relwdebinfo",
+      ".out\\install\\clang-relwdebinfo"
+    ]
+  },
+  "ExpandedNodes": [
+    ""
+  ],
+  "PreviewInSolutionExplorer": false
+}

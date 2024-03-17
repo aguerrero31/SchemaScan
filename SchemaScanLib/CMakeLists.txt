@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.26)
 
 set(PODOFO_BUILD_LIB_ONLY ON)
 find_package(podofo CONFIG REQUIRED)
@@ -18,6 +18,8 @@ add_library(${PROJECT_NAME} STATIC
     "${CMAKE_CURRENT_SOURCE_DIR}/Schematic.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/Schematic.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/SchemaScanLib.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/SchematicHandler.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/SchematicHandler.cpp"
     "${hashlib2plus_sources}"
 )
 

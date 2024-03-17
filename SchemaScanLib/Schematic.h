@@ -15,8 +15,8 @@
 
 class Schematic {
 public:
-    explicit Schematic(const std::string &fpath);
-    ~Schematic();
+    Schematic(const std::string &fpath);
+    ~Schematic(){};
     // Functions
     [[nodiscard]] std::string getFileName() const;
     [[nodiscard]] std::string getFilePath() const;

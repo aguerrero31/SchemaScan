@@ -14,16 +14,10 @@
 Schematic::Schematic(const std::string &fpath) {
     if (std::filesystem::path(fpath).extension() == ".pdf") {
         this->setup(fpath);
-    }
-    else {
+    } else {
         std::cerr << "Incorrect file path or type, cannot create Schematic object from: " << fpath << "\n";
         throw std::out_of_range("Incorrect file path or type, skipping");
     }
-}
-
-// TODO: Might be unused, need to look into whether anything needs to be done here with smart pointers
-Schematic::~Schematic() {
-
 }
 
 /**
@@ -53,7 +47,7 @@ void Schematic::parsePages() {
         std::vector<PoDoFo::PdfTextEntry> entries;
         page.ExtractTextTo(entries);
         std::string pageAsString;
-        for (auto &entry : entries) {
+        for (auto &entry: entries) {
             pageAsString += entry.Text;
         }
         this->parsed_pages_.push_back(pageAsString);
@@ -72,7 +66,7 @@ void Schematic::setHash() {
     try {
         hash = wrapper->getHashFromFile(this->path_);
     }
-    catch (hlException &e){
+    catch (hlException &e) {
         std::cerr << "Error computing file hash | " << e.error_number() << " | " << e.error_message() << "\n";
     }
     delete wrapper;
@@ -98,7 +92,7 @@ void Schematic::setInfo() {
  */
 void Schematic::setFileName() {
     std::size_t found = this->path_.find_last_of('/');
-    this->file_name_ = this->path_.substr(found+1);
+    this->file_name_ = this->path_.substr(found + 1);
 }
 
 /**
@@ -135,7 +129,7 @@ std::string Schematic::getMD5() const {
 
 /**
  * Getter for the parsed pages of a Schematic object
- * @return A vector of strings, containing the text contents of a parsed .pdf file
+ * @return A vector of strings, containing the raw text contents of a parsed .pdf file
  */
 std::vector<std::string> Schematic::getParsedPages() const {
     return this->parsed_pages_;
@@ -144,8 +138,13 @@ std::vector<std::string> Schematic::getParsedPages() const {
 /**
  * Getter for a single parsed page of a Schematic object
  * @param page The number of the page you wish to retrieve
- * @return A string, the parsed text contents of the specific page of the .pdf file
+ * @return A string, the raw parsed text contents of the specific page of the .pdf file
  */
 std::string Schematic::getParsedPage(unsigned int page) const {
-    return this->parsed_pages_.at(page+1);
+    if (page > 0 || page <= this->page_count_) {
+        return this->parsed_pages_.at(page - 1);
+    } else {
+        throw std::out_of_range(std::format("Failed to retrieve page {}. The minimum value is 1, "
+                                            "and the maximum is {}.",page,this->page_count_));
+    }
 }

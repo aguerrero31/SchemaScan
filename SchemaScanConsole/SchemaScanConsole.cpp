@@ -16,11 +16,11 @@ int main(int argc, char* argv[]) {
         std::cout << "Pages found: " << schematic.getPageCount() << "\n";
         for (int i = 1; i <= schematic.getPageCount(); ++i) {
             std::cout << "Page " << i << ": \n";
-            std::cout << schematic.getParsedPage(i) << "\n";
+            std::cout << schematic.getParsedPage(i) << "\n\n";
         }
         std::cout << "Parsing complete!";
     }
     catch (std::out_of_range &e) {
-        std::cout << "Invalid, please try again" << "\n";
+        std::cout << "Invalid: " << e.what() << "\n";
     }
 }
