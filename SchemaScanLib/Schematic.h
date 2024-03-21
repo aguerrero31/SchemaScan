@@ -6,35 +6,36 @@
 
 #include <memory>
 #include <iostream>
-#include <filesystem>
 #include <stdexcept>
 #include <vector>
 #include <string>
 
 #include <podofo/podofo.h>
+#include "utils/SchemaUtils.h"
 
 class Schematic {
 public:
-    Schematic(const std::string &fpath);
+    Schematic(const std::wstring &fpath);
     ~Schematic(){};
     // Functions
-    [[nodiscard]] std::string getFileName() const;
-    [[nodiscard]] std::string getFilePath() const;
+    [[nodiscard]] std::wstring getFileName() const;
+    [[nodiscard]] std::wstring getFilePath() const;
     [[nodiscard]] unsigned int getPageCount() const;
     [[nodiscard]] std::string getMD5() const;
-    [[nodiscard]] std::vector<std::string> getParsedPages() const;
-    [[nodiscard]] std::string getParsedPage(unsigned int page) const;
+    [[nodiscard]] std::vector<std::wstring> getParsedPages() const;
+    [[nodiscard]] std::wstring getParsedPage(unsigned int page) const;
 private:
     // Class Members
-    std::string file_name_;
-    std::string path_;
+    std::wstring file_name_;
+    std::wstring path_;
     unsigned int page_count_ = 0;
     std::string md5_hash_;
-    std::vector<std::string> parsed_pages_;
+    std::vector<std::wstring> parsed_pages_;
     // Functions
-    void setup(const std::string &fpath);
+    void setup(const std::wstring &fpath);
     void setHash();
     void parsePages();
     void setInfo();
     void setFileName();
+
 };
