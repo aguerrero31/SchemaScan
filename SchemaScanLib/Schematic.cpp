@@ -7,19 +7,27 @@
 #include <hashlibpp.h>
 
 /**
- * Default constructor for the Schematic class
+ * TODO: Currently some files cannot be hashed, unsure of why. These files seem to open fine, but the hash can't
+ *      be computed, and it cannot be parsed. Currently skipping this file by checking the hash in parsePages() for
+ *      emptiness. Look into a fix for this, or restructure the code to find a better spot to check. Also need to
+ *      maybe invalidate this object?
+ */
+
+/**
+ * Default constructor for the Schematic class. Using wstring to allow for proper handling in the case of
+ * non-ASCII characters
  * @param fpath The absolute file path to a schematic
  * @throws out_of_range if the file path is incorrect, or if the file does not end in ".pdf"
  */
 Schematic::Schematic(const std::wstring &fpath) {
     if (SchemaUtils::isPdfFile(fpath)) {
         this->path_ = fpath;
-        this->setHash();
+        this->setHash(); // always make sure setHash() is called before parsePages()
         this->setInfo();
         this->setFileName();
         this->parsePages();
     } else {
-        std::cout << "Incorrect file path or type, cannot create Schematic object from: "
+        std::cerr << "Incorrect file path or type, cannot create Schematic object from: "
                     << SchemaUtils::wStringToString(fpath) << "\n";
         throw std::out_of_range("Incorrect file path or type, skipping");
     }
@@ -40,6 +48,12 @@ void Schematic::setup(const std::wstring &fpath) {
  * Utilizes the PoDoFo library
  */
 void Schematic::parsePages() {
+    if (this->md5_hash_.empty()) {
+        std::cerr << "Skipping parsing of a file with an empty hash. Empty hash means an error computing the hash, "
+                     "which also typically means that there will be an error parsing. Skipping the file: "
+                     << SchemaUtils::wStringToString(this->path_) << "\n";
+        return;
+    }
     PoDoFo::PdfMemDocument document;
     document.Load(SchemaUtils::wStringToString(this->path_));
     auto &pages = document.GetPages();
@@ -75,16 +89,11 @@ void Schematic::setHash() {
 }
 
 /**
- * Sets extra information for the Schematic object. Currently only does the page count, but will be expanded to
- *      more in the future
- * TODO: ADD MORE FUNCTIONALITY OR CHANGE TO setPageCount()
+ * Sets extra information for the Schematic object
+ * TODO: Keep or remove?
  */
 void Schematic::setInfo() {
-    PoDoFo::PdfMemDocument document{};
-    document.Load(SchemaUtils::wStringToString(this->path_));
-    std::vector<PoDoFo::PdfTextEntry> entries;
-    PoDoFo::PdfPageCollection &pages = document.GetPages();
-    this->page_count_ = pages.GetCount();
+
 }
 
 /**
@@ -117,7 +126,7 @@ std::wstring Schematic::getFilePath() const {
  * @return An unsigned integer, the page count
  */
 unsigned int Schematic::getPageCount() const {
-    return this->page_count_;
+    return this->parsed_pages_.size();
 }
 
 /**
@@ -143,10 +152,17 @@ std::vector<std::wstring> Schematic::getParsedPages() const {
  * @return A wstring, the raw parsed text contents of the specific page of the .pdf file
  */
 std::wstring Schematic::getParsedPage(unsigned int page) const {
-    if (page > 0 || page <= this->page_count_) {
+    if (page > 0 || page <= this->parsed_pages_.size()) {
         return this->parsed_pages_.at(page - 1);
     } else {
         throw std::out_of_range(std::format("Failed to retrieve page {}. The minimum value is 1, "
-                                            "and the maximum is {}.",page,this->page_count_));
+                                            "and the maximum is {}.",page,this->parsed_pages_.size()));
     }
+}
+
+// Searches a schematic object for a term, returning a map with the name and
+//
+std::map<std::string, std::vector<int>> Schematic::Search(const std::string &searchTerm, bool includePath) const {
+//    std::map<std::string, std::vector<int>> containsTermMap;
+//    for ()
 }

@@ -7,7 +7,7 @@ int main(int argc, char* argv[]) {
     try {
         std::wstring path;
         std::cout << "Starting...\n";
-        path = SchemaUtils::stringToWString(R"(E:Electronics Repair\Schematics & BoardViews\LOTS OF SCHEMATICS AND BOARDVIEWS bv_varios_repromod\BoardView Varios feat. REPROMOD\GPU Boardviews\NVIDIA)");
+        path = SchemaUtils::stringToWString(R"(E:\Electronics Repair\Schematic Program Test\rustest)");
         //  std::cout << "Please enter the full path to the schematic: \n";
         // std::cin >> path;
 //        Schematic schematic(path);
@@ -22,6 +22,15 @@ int main(int argc, char* argv[]) {
 //        std::cout << "Parsing complete!";
         SchematicHandler handler(path);
         std::cout << "Found " << handler.getFoundFilesCount() << " schematic(s)\n";
+        for (const auto &schematic : handler.getSchematics()) {
+            std::cout << "Valid Schematic: " << SchemaUtils::wStringToString(schematic->getFileName()) << "\n";
+        }
+        std::cout << "\n\n";
+        for (const auto &schematic : handler.getSkippedSchematics()) {
+            std::cout << "Skipped Schematic: " << SchemaUtils::wStringToString(schematic) << "\n";
+        }
+        std::cout << "Scanned " << handler.getSchematicCount() << " schematic(s)\n";
+        std::cout << "Skipped " << handler.getSkippedSchematicCount() << " schematic(s)\n";
     }
     catch (std::out_of_range &e) {
         std::cout << "Invalid: " << e.what() << "\n";

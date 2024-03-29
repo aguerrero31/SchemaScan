@@ -18,6 +18,7 @@ public:
     Schematic(const std::wstring &fpath);
     ~Schematic(){};
     // Functions
+    std::map<std::string, std::vector<int>> Search(const std::string &searchTerm, bool includePath) const;
     [[nodiscard]] std::wstring getFileName() const;
     [[nodiscard]] std::wstring getFilePath() const;
     [[nodiscard]] unsigned int getPageCount() const;
@@ -26,11 +27,10 @@ public:
     [[nodiscard]] std::wstring getParsedPage(unsigned int page) const;
 private:
     // Class Members
-    std::wstring file_name_;
-    std::wstring path_;
-    unsigned int page_count_ = 0;
-    std::string md5_hash_;
-    std::vector<std::wstring> parsed_pages_;
+    std::wstring file_name_; // file name and extension, not a full path
+    std::wstring path_; // absolute path of the file, including file name and extension
+    std::string md5_hash_; // the md5 hash of the file. empty if it cannot be calculated
+    std::vector<std::wstring> parsed_pages_; // contains the parsed text of each page of the file
     // Functions
     void setup(const std::wstring &fpath);
     void setHash();
