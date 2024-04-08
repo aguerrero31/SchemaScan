@@ -4,8 +4,6 @@
 
 #include "Schematic.h"
 
-#include <hashlibpp.h>
-
 /**
  * TODO: Currently some files cannot be hashed, unsure of why. These files seem to open fine, but the hash can't
  *      be computed, and it cannot be parsed. Currently skipping this file by checking the hash in parsePages() for
@@ -14,12 +12,11 @@
  */
 
 /**
- * Default constructor for the Schematic class. Using wstring to allow for proper handling in the case of
- * non-ASCII characters
+ * Default constructor for the Schematic class
  * @param fpath The absolute file path to a schematic
  * @throws out_of_range if the file path is incorrect, or if the file does not end in ".pdf"
  */
-Schematic::Schematic(const std::wstring &fpath) {
+Schematic::Schematic(const std::u32string &fpath) {
     if (SchemaUtils::isPdfFile(fpath)) {
         this->path_ = fpath;
         this->setHash(); // always make sure setHash() is called before parsePages()
@@ -27,43 +24,26 @@ Schematic::Schematic(const std::wstring &fpath) {
         this->setFileName();
         this->parsePages();
     } else {
-        std::cerr << "Incorrect file path or type, cannot create Schematic object from: "
-                    << SchemaUtils::wStringToString(fpath) << "\n";
-        throw std::out_of_range("Incorrect file path or type, skipping");
+        throw std::out_of_range("Incorrect file path or type");
     }
-}
-
-/**
- * Setup function for a Schematic object. Sets private class members like the file path, the hash, file name, etc.
- * Additionally calls parsePages() to parse all of the pages in the .pdf
- * @param fpath The absolute file path to a schematic
- */
-void Schematic::setup(const std::wstring &fpath) {
-    // TODO: Remove this function? Moved everything to constructor
 }
 
 /**
  * Parses the .pdf file contained at the path that the Schematic object was created with (path_). Reads the text one
- *      page at a time, and adds the wstring representation to the Schematic object's parsed_pages_ vector.
+ *      page at a time, and adds the u32string representation to the Schematic object's parsed_pages_ vector.
  * Utilizes the PoDoFo library
  */
 void Schematic::parsePages() {
-    if (this->md5_hash_.empty()) {
-        std::cerr << "Skipping parsing of a file with an empty hash. Empty hash means an error computing the hash, "
-                     "which also typically means that there will be an error parsing. Skipping the file: "
-                     << SchemaUtils::wStringToString(this->path_) << "\n";
-        return;
-    }
     PoDoFo::PdfMemDocument document;
-    document.Load(SchemaUtils::wStringToString(this->path_));
+    document.Load(SchemaUtils::u32StringToStdString(this->path_));
     auto &pages = document.GetPages();
     for (int i = 0; i < pages.GetCount(); ++i) {
         PoDoFo::PdfPage &page = pages.GetPageAt(i);
         std::vector<PoDoFo::PdfTextEntry> entries;
         page.ExtractTextTo(entries);
-        std::wstring pageAsString;
+        std::u32string pageAsString;
         for (auto &entry: entries) {
-            pageAsString += SchemaUtils::stringToWString(entry.Text);
+            pageAsString += SchemaUtils::stdStringToU32String(entry.Text);
         }
         this->parsed_pages_.push_back(pageAsString);
     }
@@ -79,7 +59,7 @@ void Schematic::setHash() {
     hashwrapper *wrapper = new md5wrapper();
     std::string hash;
     try {
-        hash = wrapper->getHashFromFile(SchemaUtils::wStringToString(this->path_));
+        hash = wrapper->getHashFromString(SchemaUtils::u32StringToStdString(this->path_));
     }
     catch (hlException &e) {
         std::cerr << "Error computing file hash | " << e.error_number() << " | " << e.error_message() << "\n";
@@ -97,8 +77,7 @@ void Schematic::setInfo() {
 }
 
 /**
- * Gets the file name from the absolute path of the Schematic object
- * @return A wstring containing the file name
+ * Sets the file name of the Schematic object. Excludes all other path info, file name and extension only
  */
 void Schematic::setFileName() {
     std::size_t found = this->path_.find_last_of('/');
@@ -107,17 +86,17 @@ void Schematic::setFileName() {
 
 /**
  * Getter for the file name (extension included) contained in a Schematic object
- * @return A wstring, the file name
+ * @return A u32string, the file name
  */
-std::wstring Schematic::getFileName() const {
+std::u32string Schematic::getFileName() const {
     return this->file_name_;
 }
 
 /**
  * Getter for the absolute file path (file name & extension included) contained in a Schematic object
- * @return A wstring, the absolute path
+ * @return A u32string, the absolute path
  */
-std::wstring Schematic::getFilePath() const {
+std::u32string Schematic::getFilePath() const {
     return this->path_;
 }
 
@@ -139,9 +118,9 @@ std::string Schematic::getMD5() const {
 
 /**
  * Getter for the parsed pages of a Schematic object
- * @return A vector of wstrings, containing the raw text contents of a parsed .pdf file
+ * @return A vector of u32strings, containing the raw text contents of a parsed .pdf file
  */
-std::vector<std::wstring> Schematic::getParsedPages() const {
+std::vector<std::u32string> Schematic::getParsedPages() const {
     return this->parsed_pages_;
 }
 
@@ -149,9 +128,9 @@ std::vector<std::wstring> Schematic::getParsedPages() const {
  * Getter for a single parsed page of a Schematic object
  * @param page The number of the page you wish to retrieve
  * @throws out_of_range if the passed in value is not > 0, or is higher than the page count of the Schematic object
- * @return A wstring, the raw parsed text contents of the specific page of the .pdf file
+ * @return A u32string, the raw parsed text contents of the specific page of the .pdf file
  */
-std::wstring Schematic::getParsedPage(unsigned int page) const {
+std::u32string Schematic::getParsedPage(unsigned int page) const {
     if (page > 0 || page <= this->parsed_pages_.size()) {
         return this->parsed_pages_.at(page - 1);
     } else {

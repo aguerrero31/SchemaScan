@@ -5,9 +5,9 @@
 
 int main(int argc, char* argv[]) {
     try {
-        std::wstring path;
-        std::cout << "Starting...\n";
-        path = SchemaUtils::stringToWString(R"(E:\Electronics Repair\Schematic Program Test\rustest)");
+        std::u32string path;
+        std::cout << "Starting...\n\n";
+        path = U"E:\\Electronics Repair\\Schematics & Boardviews";
         //  std::cout << "Please enter the full path to the schematic: \n";
         // std::cin >> path;
 //        Schematic schematic(path);
@@ -23,11 +23,11 @@ int main(int argc, char* argv[]) {
         SchematicHandler handler(path);
         std::cout << "Found " << handler.getFoundFilesCount() << " schematic(s)\n";
         for (const auto &schematic : handler.getSchematics()) {
-            std::cout << "Valid Schematic: " << SchemaUtils::wStringToString(schematic->getFileName()) << "\n";
+            std::cout << "Valid Schematic: " << SchemaUtils::u32StringToStdString(schematic->getFileName()) << "\n";
         }
         std::cout << "\n\n";
         for (const auto &schematic : handler.getSkippedSchematics()) {
-            std::cout << "Skipped Schematic: " << SchemaUtils::wStringToString(schematic) << "\n";
+            std::cout << "Skipped Schematic: " << SchemaUtils::u32StringToStdString(schematic) << "\n";
         }
         std::cout << "Scanned " << handler.getSchematicCount() << " schematic(s)\n";
         std::cout << "Skipped " << handler.getSkippedSchematicCount() << " schematic(s)\n";
