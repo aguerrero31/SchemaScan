@@ -10,9 +10,9 @@
 
 class SchemaUtils {
 public:
-    static bool isPdfFile(const std::wstring &fpath);
-    static std::string wStringToString(const std::wstring &w_string);
-    static std::wstring stringToWString(const std::string &string);
+    static bool isPdfFile(const std::u32string &fpath);
+    static std::string u32StringToStdString(const std::u32string &u32_string);
+    static std::u32string stdStringToU32String(const std::string &string);
 };
 
 
