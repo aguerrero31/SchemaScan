@@ -9,6 +9,7 @@
 #include <vector>
 #include <filesystem>
 #include <iostream>
+#include <set>
 
 #include "Schematic.h"
 #include "utils/SchemaUtils.h"
@@ -23,7 +24,6 @@ public:
     [[nodiscard]] int getSkippedSchematicCount() const;
     [[nodiscard]] std::vector<std::u32string> getSkippedSchematics() const;
     [[nodiscard]] std::vector<Schematic*> getSchematics() const;
-
 private:
     void Scan();
     void Search();

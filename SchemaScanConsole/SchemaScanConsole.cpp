@@ -7,7 +7,7 @@ int main(int argc, char* argv[]) {
     try {
         std::u32string path;
         std::cout << "Starting...\n\n";
-        path = U"E:\\Electronics Repair\\Schematics & Boardviews";
+        path = U"E:\\Electronics Repair\\Schematic Program Test\\smalltest";
         //  std::cout << "Please enter the full path to the schematic: \n";
         // std::cin >> path;
 //        Schematic schematic(path);
@@ -21,6 +21,7 @@ int main(int argc, char* argv[]) {
 //        }
 //        std::cout << "Parsing complete!";
         SchematicHandler handler(path);
+        // Parsing testing
         std::cout << "Found " << handler.getFoundFilesCount() << " schematic(s)\n";
         for (const auto &schematic : handler.getSchematics()) {
             std::cout << "Valid Schematic: " << SchemaUtils::u32StringToStdString(schematic->getFileName()) << "\n";
@@ -31,6 +32,13 @@ int main(int argc, char* argv[]) {
         }
         std::cout << "Scanned " << handler.getSchematicCount() << " schematic(s)\n";
         std::cout << "Skipped " << handler.getSkippedSchematicCount() << " schematic(s)\n";
+
+        // Cache testing
+        // TODO: Have user specify the cachePath
+        std::u32string cachePath = U"E:\\Electronics Repair\\Schematic Program Test\\cache\\";
+        for (auto &schem : handler.getSchematics()) {
+            schem->cache(cachePath + schem->getFileNameNoExt() + U".json");
+        }
     }
     catch (std::out_of_range &e) {
         std::cout << "Invalid: " << e.what() << "\n";

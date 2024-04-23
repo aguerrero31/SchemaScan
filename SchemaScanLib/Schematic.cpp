@@ -3,13 +3,18 @@
 //
 
 #include "Schematic.h"
+#include "utils/SchemaUtils.h"
 
-/**
- * TODO: Currently some files cannot be hashed, unsure of why. These files seem to open fine, but the hash can't
- *      be computed, and it cannot be parsed. Currently skipping this file by checking the hash in parsePages() for
- *      emptiness. Look into a fix for this, or restructure the code to find a better spot to check. Also need to
- *      maybe invalidate this object?
- */
+#include <vector>
+#include <map>
+#include <stdexcept>
+#include <iostream>
+#include <fstream>
+
+#include <podofo/podofo.h>
+#include <hashlibpp.h>
+#include <nlohmann/json.hpp>
+
 
 /**
  * Default constructor for the Schematic class
@@ -20,11 +25,23 @@ Schematic::Schematic(const std::u32string &fpath) {
     if (SchemaUtils::isPdfFile(fpath)) {
         this->path_ = fpath;
         this->setHash(); // always make sure setHash() is called before parsePages()
-        this->setInfo();
         this->setFileName();
         this->parsePages();
     } else {
         throw std::out_of_range("Incorrect file path or type");
+    }
+}
+
+/**
+ * Constructor that creates a Schematic object from a nlohmann::ordered_json object
+ * @param jsonObj The ordered_json object that you wish to create a Schematic object from
+ */
+Schematic::Schematic(const nlohmann::ordered_json &jsonObj) {
+    this->file_name_ = SchemaUtils::stdStringToU32String(jsonObj["name"]);
+    this->path_ = SchemaUtils::stdStringToU32String(jsonObj["path"]);
+    this->md5_hash_ = jsonObj["md5"];
+    for (const std::string page : jsonObj["pages"]) {
+        this->parsed_pages_.push_back(SchemaUtils::stdStringToU32String(page));
     }
 }
 
@@ -69,19 +86,17 @@ void Schematic::setHash() {
 }
 
 /**
- * Sets extra information for the Schematic object
- * TODO: Keep or remove?
- */
-void Schematic::setInfo() {
-
-}
-
-/**
  * Sets the file name of the Schematic object. Excludes all other path info, file name and extension only
  */
 void Schematic::setFileName() {
-    std::size_t found = this->path_.find_last_of('/');
-    this->file_name_ = this->path_.substr(found + 1);
+    std::size_t foundAt;
+    if (this->path_.find('/') != std::string::npos) {
+        foundAt = this->path_.find_last_of('/');
+    }
+    else {
+        foundAt = this->path_.find_last_of('\\');
+    }
+    this->file_name_ = this->path_.substr(foundAt + 1);
 }
 
 /**
@@ -90,6 +105,14 @@ void Schematic::setFileName() {
  */
 std::u32string Schematic::getFileName() const {
     return this->file_name_;
+}
+
+/**
+ * Getter for the file name (extension excluded) contained in a Schematic object
+ * @return A u32string, the file name
+ */
+std::u32string Schematic::getFileNameNoExt() const {
+    return this->file_name_.substr(0,this->file_name_.length()-4);
 }
 
 /**
@@ -130,7 +153,7 @@ std::vector<std::u32string> Schematic::getParsedPages() const {
  * @throws out_of_range if the passed in value is not > 0, or is higher than the page count of the Schematic object
  * @return A u32string, the raw parsed text contents of the specific page of the .pdf file
  */
-std::u32string Schematic::getParsedPage(unsigned int page) const {
+std::u32string Schematic::getParsedPage(const unsigned int page) const {
     if (page > 0 || page <= this->parsed_pages_.size()) {
         return this->parsed_pages_.at(page - 1);
     } else {
@@ -144,4 +167,49 @@ std::u32string Schematic::getParsedPage(unsigned int page) const {
 std::map<std::string, std::vector<int>> Schematic::Search(const std::string &searchTerm, bool includePath) const {
 //    std::map<std::string, std::vector<int>> containsTermMap;
 //    for ()
+    return std::map<std::string, std::vector<int>>{{}};
 }
+
+/**
+ * Stores the json object representation of a Schematic object in a file, at a given path
+ * @param cachePath A string, the absolute path for where you want the .json file stored (file name must be included)
+ */
+void Schematic::cache(const std::u32string &cachePath) {
+    // TODO: Check if file already exists. Then override or not? (let user decide probably)
+    auto convertedPath = SchemaUtils::u32StringToStdString(cachePath);
+    if (SchemaUtils::isJsonFile(cachePath)) {
+        nlohmann::ordered_json jsonObj = this->toJson();
+        // TODO: Convert to wstring or something else to output proper file name, right now non-ASCII chars are garbage
+        std::ofstream output(convertedPath);
+        output << std::setw(4) << jsonObj << std::endl;
+        output.close();
+    }
+    // TODO: Change this to an exception? Handle this another way instead of skipping?
+    else {
+        std::cerr << "Incorrect path (permissions issue, not absolute path, doesn't contain file name and extension,"
+                     "etc), caching will be skipped for " << SchemaUtils::u32StringToStdString(this->path_)
+                     << ". Entered path: " << convertedPath << "\n";
+    }
+}
+
+// TODO: Push back u32string instead of string to ensure that no character issues occur when storing and
+//      reading? If so, adjust constructor to read u32string instead of string from "pages"
+/**
+ * Converts a Schematic object to an nlohmann::ordered_json object
+ * @return nlohmann::ordered_json, a json representation of the Schematic object
+ */
+nlohmann::ordered_json Schematic::toJson() {
+    auto jsonObj = nlohmann::ordered_json{
+            {"name", SchemaUtils::u32StringToStdString(this->file_name_)},
+            {"path", SchemaUtils::u32StringToStdString(this->path_)},
+            {"md5", this->md5_hash_},
+            {"pageCount", this->getPageCount()},
+            {"pages", nlohmann::ordered_json::array()}
+    };
+    for (int i = 1; i <= this->getPageCount(); ++i) {
+        jsonObj["pages"].push_back({SchemaUtils::u32StringToStdString(this->getParsedPage(i))});
+    }
+    return jsonObj;
+}
+
+
