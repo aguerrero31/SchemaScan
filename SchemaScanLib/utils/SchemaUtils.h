@@ -11,6 +11,7 @@
 class SchemaUtils {
 public:
     static bool isPdfFile(const std::u32string &fpath);
+    static bool isJsonFile(const std::u32string &fpath);
     static std::string u32StringToStdString(const std::u32string &u32_string);
     static std::u32string stdStringToU32String(const std::string &string);
 };

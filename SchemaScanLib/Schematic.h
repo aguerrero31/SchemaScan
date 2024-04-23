@@ -4,29 +4,26 @@
 
 #pragma once
 
-#include <memory>
-#include <iostream>
-#include <stdexcept>
 #include <vector>
 #include <string>
-
-#include <podofo/podofo.h>
+#include <map>
+#include <nlohmann/json.hpp>
 #include <hashlibpp.h>
-
-#include "utils/SchemaUtils.h"
 
 class Schematic {
 public:
     Schematic(const std::u32string &fpath);
-    ~Schematic(){};
+    Schematic(const nlohmann::ordered_json &jsonObj);
     // Functions
     std::map<std::string, std::vector<int>> Search(const std::string &searchTerm, bool includePath) const;
     [[nodiscard]] std::u32string getFileName() const;
+    [[nodiscard]] std::u32string getFileNameNoExt() const;
     [[nodiscard]] std::u32string getFilePath() const;
     [[nodiscard]] unsigned int getPageCount() const;
     [[nodiscard]] std::string getMD5() const;
     [[nodiscard]] std::vector<std::u32string> getParsedPages() const;
-    [[nodiscard]] std::u32string getParsedPage(unsigned int page) const;
+    [[nodiscard]] std::u32string getParsedPage(const unsigned int page) const;
+    void cache(const std::u32string &cachePath);
 private:
     // Class Members
     std::u32string file_name_; // file name and extension, not a full path
@@ -36,6 +33,6 @@ private:
     // Functions
     void setHash();
     void parsePages();
-    void setInfo();
     void setFileName();
+    nlohmann::ordered_json toJson();
 };

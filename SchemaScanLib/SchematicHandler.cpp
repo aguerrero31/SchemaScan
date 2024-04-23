@@ -3,6 +3,16 @@
 //
 
 #include "SchematicHandler.h"
+#include "utils/SchemaUtils.h"
+
+#include <string>
+#include <vector>
+#include <filesystem>
+#include <iostream>
+#include <set>
+
+#include <hashlibpp.h>
+#include <nlohmann/json.hpp>
 
 SchematicHandler::SchematicHandler(const std::u32string &path) {
     base_directory_ = path;

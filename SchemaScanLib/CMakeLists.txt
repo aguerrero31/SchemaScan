@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.26)
 
 set(PODOFO_BUILD_LIB_ONLY ON)
 find_package(podofo CONFIG REQUIRED)
+find_package(nlohmann_json 3.11.3 REQUIRED)
 
 project(SchemaScanLib
         LANGUAGES C CXX
@@ -39,5 +40,7 @@ target_include_directories(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME}
-    PUBLIC $<IF:$<TARGET_EXISTS:podofo_shared>,podofo_shared,podofo_static>
+    PUBLIC
+        $<IF:$<TARGET_EXISTS:podofo_shared>,podofo_shared,podofo_static>
+        nlohmann_json::nlohmann_json
 )
