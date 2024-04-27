@@ -24,6 +24,7 @@ public:
     [[nodiscard]] int getSkippedSchematicCount() const;
     [[nodiscard]] std::vector<std::u32string> getSkippedSchematics() const;
     [[nodiscard]] std::vector<Schematic*> getSchematics() const;
+    void cacheAll(const std::u32string &cacheDir, const bool overwrite) const;
 private:
     void Scan();
     void Search();

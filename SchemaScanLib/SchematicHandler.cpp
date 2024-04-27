@@ -14,6 +14,8 @@
 #include <hashlibpp.h>
 #include <nlohmann/json.hpp>
 
+// Constructors / Destructor
+
 SchematicHandler::SchematicHandler(const std::u32string &path) {
     base_directory_ = path;
     if (SchemaUtils::isPdfFile(path)) {
@@ -23,15 +25,19 @@ SchematicHandler::SchematicHandler(const std::u32string &path) {
     Scan();
 }
 
-// Destructor
 SchematicHandler::~SchematicHandler() {
     for (Schematic *schematic : schematics_) {
         delete schematic;
     }
 }
 
-// Scans all Schematics gathered from Search()
-// Catches all exceptions thrown during Schematic object creation, and skips adding to vector if any throws occur
+// General Functions
+
+/**
+ * Scans all .pdf files in the SchematicHandler's fpaths_ object. Skips files with an incorrect path, files whose
+ *      md5 hash could not be calculated, or files that fail parsing for any reason. Search() should typically be
+ *      called before this function to ensure that fpaths_ actually has items in it
+ */
 void SchematicHandler::Scan() {
     for (const auto &path : fpaths_) {
         try {
@@ -62,7 +68,11 @@ void SchematicHandler::Scan() {
     }
 }
 
-// Searches the directory recursively for all schematics (ensures they're .pdf files), and adds the full path to fpaths_
+/**
+ * Searches a SchematicHandler's base_directory_ recursively for all .pdf files, adding the absolute path (file name
+ *      and extension included) to the fpaths_ object. Typically called before Scan() to populate the list of files,
+ *      otherwise there will be nothing to scan
+ */
 void SchematicHandler::Search() {
     std::u32string prefix = U"\\\\?\\";
     try {
@@ -86,22 +96,57 @@ void SchematicHandler::Search() {
     }
 }
 
+/**
+ * Cache a .json representation of all Schematic objects in a SchematicHandler
+ * @param cacheDir The directory that the cache files will be stored at
+ * @param overwrite A boolean, whether to overwrite a file that already exists
+ */
+void SchematicHandler::cacheAll(const std::u32string &cacheDir, const bool overwrite) const {
+    for (auto &schem : this->schematics_) {
+        schem->cache(cacheDir, overwrite);
+    }
+}
+
+// Getters
+
+/**
+ * Get the amount of files found by the Search() function. These are not necessarily all valid, some may fail to
+ *      be turned into Schematic objects for various reasons (see Scan())
+ * @return an integer
+ */
 int SchematicHandler::getFoundFilesCount() const {
     return int(this->fpaths_.size());
 }
 
+/**
+ * Get the amount of Schematic objects in the SchematicHandler. These are all guaranteed valid
+ * @return an integer
+ */
 int SchematicHandler::getSchematicCount() const {
     return int(this->schematics_.size());
 }
 
+/**
+ * Get all of the Schematic objects contained in the SchematicHandler
+ * @return a vector of pointers to Schematic objects
+ */
 std::vector<Schematic *> SchematicHandler::getSchematics() const {
     return this->schematics_;
 }
 
+/**
+ * Get the amount of .pdf files that could not be converted into Schematic objects for any reason
+ * @return An integer
+ */
 int SchematicHandler::getSkippedSchematicCount() const {
     return int(this->skipped_schematic_paths_.size());
 }
 
+/**
+ * Get the absolute paths (file names included) for the .pdf files that could not be converted into Schematic objects
+ *      for any reason
+ * @return A vector of std::u32strings
+ */
 std::vector<std::u32string> SchematicHandler::getSkippedSchematics() const {
     return this->skipped_schematic_paths_;
 }

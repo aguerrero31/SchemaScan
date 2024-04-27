@@ -36,9 +36,7 @@ int main(int argc, char* argv[]) {
         // Cache testing
         // TODO: Have user specify the cachePath
         std::u32string cachePath = U"E:\\Electronics Repair\\Schematic Program Test\\cache\\";
-        for (auto &schem : handler.getSchematics()) {
-            schem->cache(cachePath + schem->getFileNameNoExt() + U".json");
-        }
+        handler.cacheAll(cachePath, true);
     }
     catch (std::out_of_range &e) {
         std::cout << "Invalid: " << e.what() << "\n";
