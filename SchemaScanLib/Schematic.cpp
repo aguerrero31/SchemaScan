@@ -10,6 +10,7 @@
 #include <stdexcept>
 #include <iostream>
 #include <fstream>
+#include <set>
 
 #include <podofo/podofo.h>
 #include <hashlibpp.h>
@@ -89,14 +90,7 @@ void Schematic::setHash() {
  * Sets the file name of the Schematic object. Excludes all other path info, file name and extension only
  */
 void Schematic::setFileName() {
-    std::size_t foundAt;
-    if (this->path_.find('/') != std::string::npos) {
-        foundAt = this->path_.find_last_of('/');
-    }
-    else {
-        foundAt = this->path_.find_last_of('\\');
-    }
-    this->file_name_ = this->path_.substr(foundAt + 1);
+    this->file_name_ = SchemaUtils::getNameAndExtFromPath(this->path_);
 }
 
 /**
@@ -171,16 +165,22 @@ std::map<std::string, std::vector<int>> Schematic::Search(const std::string &sea
 }
 
 /**
- * Stores the json object representation of a Schematic object in a file, at a given path
- * @param cachePath A string, the absolute path for where you want the .json file stored (file name must be included)
+ * Stores the json object representation of a Schematic object in a file, at a given path. Checks the cache directory
+ *      for the file to see if it already exists, and will skip or overwrite it depending on the overwrite parameter
+ * @param cacheDir A string, the directory where you want the file to be stored
+ * @param overwrite A boolean, whether the file should be overwritten if it already exists
  */
-void Schematic::cache(const std::u32string &cachePath) {
-    // TODO: Check if file already exists. Then override or not? (let user decide probably)
-    auto convertedPath = SchemaUtils::u32StringToStdString(cachePath);
-    if (SchemaUtils::isJsonFile(cachePath)) {
+void Schematic::cache(const std::u32string &cacheDir, const bool overwrite) {
+    std::set<std::u32string> cachedFiles = SchemaUtils::searchDirectoryFor(cacheDir, ".json",
+                                                                           SchemaUtils::fileNameType::Extension);
+    auto outPath = SchemaUtils::u32StringToStdString(cacheDir + this->getFileNameNoExt() + U".json");
+    if (std::filesystem::is_directory(cacheDir)) {
+        if (cachedFiles.contains(this->getFileNameNoExt() + U".json") && !overwrite) {
+            return;
+        }
         nlohmann::ordered_json jsonObj = this->toJson();
         // TODO: Convert to wstring or something else to output proper file name, right now non-ASCII chars are garbage
-        std::ofstream output(convertedPath);
+        std::ofstream output(outPath);
         output << std::setw(4) << jsonObj << std::endl;
         output.close();
     }
@@ -188,12 +188,13 @@ void Schematic::cache(const std::u32string &cachePath) {
     else {
         std::cerr << "Incorrect path (permissions issue, not absolute path, doesn't contain file name and extension,"
                      "etc), caching will be skipped for " << SchemaUtils::u32StringToStdString(this->path_)
-                     << ". Entered path: " << convertedPath << "\n";
+                     << ". Entered path: " << outPath << "\n";
     }
 }
 
-// TODO: Push back u32string instead of string to ensure that no character issues occur when storing and
-//      reading? If so, adjust constructor to read u32string instead of string from "pages"
+// TODO: Does not work with u32string, check if it works with wstring (probably going to convert entire program to
+//      wstring anyways). If it doesn't, might need to find another option... I think file names might be messed
+//      up for converting from json file to Schematic obj
 /**
  * Converts a Schematic object to an nlohmann::ordered_json object
  * @return nlohmann::ordered_json, a json representation of the Schematic object

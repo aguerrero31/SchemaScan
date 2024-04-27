@@ -23,7 +23,8 @@ public:
     [[nodiscard]] std::string getMD5() const;
     [[nodiscard]] std::vector<std::u32string> getParsedPages() const;
     [[nodiscard]] std::u32string getParsedPage(const unsigned int page) const;
-    void cache(const std::u32string &cachePath);
+    void cache(const std::u32string &cacheDir, const bool overwrite);
+
 private:
     // Class Members
     std::u32string file_name_; // file name and extension, not a full path
