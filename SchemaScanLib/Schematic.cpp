@@ -22,7 +22,7 @@
  * @param fpath The absolute file path to a schematic
  * @throws out_of_range if the file path is incorrect, or if the file does not end in ".pdf"
  */
-Schematic::Schematic(const std::u32string &fpath) {
+Schematic::Schematic(const std::wstring &fpath) {
     if (SchemaUtils::isPdfFile(fpath)) {
         this->path_ = fpath;
         this->setHash(); // always make sure setHash() is called before parsePages()
@@ -38,11 +38,11 @@ Schematic::Schematic(const std::u32string &fpath) {
  * @param jsonObj The ordered_json object that you wish to create a Schematic object from
  */
 Schematic::Schematic(const nlohmann::ordered_json &jsonObj) {
-    this->file_name_ = SchemaUtils::stdStringToU32String(jsonObj["name"]);
-    this->path_ = SchemaUtils::stdStringToU32String(jsonObj["path"]);
+    this->file_name_ = SchemaUtils::stdStringToWString(jsonObj["name"]);
+    this->path_ = SchemaUtils::stdStringToWString(jsonObj["path"]);
     this->md5_hash_ = jsonObj["md5"];
     for (const std::string page : jsonObj["pages"]) {
-        this->parsed_pages_.push_back(SchemaUtils::stdStringToU32String(page));
+        this->parsed_pages_.push_back(page);
     }
 }
 
@@ -53,15 +53,15 @@ Schematic::Schematic(const nlohmann::ordered_json &jsonObj) {
  */
 void Schematic::parsePages() {
     PoDoFo::PdfMemDocument document;
-    document.Load(SchemaUtils::u32StringToStdString(this->path_));
+    document.Load(SchemaUtils::wstringToStdString(this->path_));
     auto &pages = document.GetPages();
     for (int i = 0; i < pages.GetCount(); ++i) {
         PoDoFo::PdfPage &page = pages.GetPageAt(i);
         std::vector<PoDoFo::PdfTextEntry> entries;
         page.ExtractTextTo(entries);
-        std::u32string pageAsString;
+        std::string pageAsString;
         for (auto &entry: entries) {
-            pageAsString += SchemaUtils::stdStringToU32String(entry.Text);
+            pageAsString += entry.Text + " ";
         }
         this->parsed_pages_.push_back(pageAsString);
     }
@@ -77,7 +77,7 @@ void Schematic::setHash() {
     hashwrapper *wrapper = new md5wrapper();
     std::string hash;
     try {
-        hash = wrapper->getHashFromString(SchemaUtils::u32StringToStdString(this->path_));
+        hash = wrapper->getHashFromString(SchemaUtils::wstringToStdString(this->path_));
     }
     catch (hlException &e) {
         std::cerr << "Error computing file hash | " << e.error_number() << " | " << e.error_message() << "\n";
@@ -97,7 +97,7 @@ void Schematic::setFileName() {
  * Getter for the file name (extension included) contained in a Schematic object
  * @return A u32string, the file name
  */
-std::u32string Schematic::getFileName() const {
+std::wstring Schematic::getFileName() const {
     return this->file_name_;
 }
 
@@ -105,7 +105,7 @@ std::u32string Schematic::getFileName() const {
  * Getter for the file name (extension excluded) contained in a Schematic object
  * @return A u32string, the file name
  */
-std::u32string Schematic::getFileNameNoExt() const {
+std::wstring Schematic::getFileNameNoExt() const {
     return this->file_name_.substr(0,this->file_name_.length()-4);
 }
 
@@ -113,7 +113,7 @@ std::u32string Schematic::getFileNameNoExt() const {
  * Getter for the absolute file path (file name & extension included) contained in a Schematic object
  * @return A u32string, the absolute path
  */
-std::u32string Schematic::getFilePath() const {
+std::wstring Schematic::getFilePath() const {
     return this->path_;
 }
 
@@ -137,7 +137,7 @@ std::string Schematic::getMD5() const {
  * Getter for the parsed pages of a Schematic object
  * @return A vector of u32strings, containing the raw text contents of a parsed .pdf file
  */
-std::vector<std::u32string> Schematic::getParsedPages() const {
+std::vector<std::string> Schematic::getParsedPages() const {
     return this->parsed_pages_;
 }
 
@@ -145,9 +145,9 @@ std::vector<std::u32string> Schematic::getParsedPages() const {
  * Getter for a single parsed page of a Schematic object
  * @param page The number of the page you wish to retrieve
  * @throws out_of_range if the passed in value is not > 0, or is higher than the page count of the Schematic object
- * @return A u32string, the raw parsed text contents of the specific page of the .pdf file
+ * @return A wstring, the raw parsed text contents of the specific page of the .pdf file
  */
-std::u32string Schematic::getParsedPage(const unsigned int page) const {
+std::string Schematic::getParsedPage(const unsigned int page) const {
     if (page > 0 || page <= this->parsed_pages_.size()) {
         return this->parsed_pages_.at(page - 1);
     } else {
@@ -170,12 +170,12 @@ std::map<std::string, std::vector<int>> Schematic::Search(const std::string &sea
  * @param cacheDir A string, the directory where you want the file to be stored
  * @param overwrite A boolean, whether the file should be overwritten if it already exists
  */
-void Schematic::cache(const std::u32string &cacheDir, const bool overwrite) {
-    std::set<std::u32string> cachedFiles = SchemaUtils::searchDirectoryFor(cacheDir, ".json",
+void Schematic::cache(const std::wstring &cacheDir, const bool overwrite) {
+    std::set<std::wstring> cachedFiles = SchemaUtils::searchDirectoryFor(cacheDir, ".json",
                                                                            SchemaUtils::fileNameType::Extension);
-    auto outPath = SchemaUtils::u32StringToStdString(cacheDir + this->getFileNameNoExt() + U".json");
+    std::wstring outPath = cacheDir + L"\\" + this->getFileNameNoExt() + L".json";
     if (std::filesystem::is_directory(cacheDir)) {
-        if (cachedFiles.contains(this->getFileNameNoExt() + U".json") && !overwrite) {
+        if (cachedFiles.contains(this->getFileNameNoExt() + L".json") && !overwrite) {
             return;
         }
         nlohmann::ordered_json jsonObj = this->toJson();
@@ -186,29 +186,26 @@ void Schematic::cache(const std::u32string &cacheDir, const bool overwrite) {
     }
     // TODO: Change this to an exception? Handle this another way instead of skipping?
     else {
-        std::cerr << "Incorrect path (permissions issue, not absolute path, doesn't contain file name and extension,"
-                     "etc), caching will be skipped for " << SchemaUtils::u32StringToStdString(this->path_)
-                     << ". Entered path: " << outPath << "\n";
+        std::wcerr << "Incorrect path (permissions issue, not absolute path, doesn't contain file name and extension,"
+                     "etc), caching will be skipped for " << this->path_ << ". Entered path: " << outPath << "\n";
     }
 }
 
-// TODO: Does not work with u32string, check if it works with wstring (probably going to convert entire program to
-//      wstring anyways). If it doesn't, might need to find another option... I think file names might be messed
-//      up for converting from json file to Schematic obj
+// TODO: Does not work with u32string, check if it works with wstring
 /**
  * Converts a Schematic object to an nlohmann::ordered_json object
  * @return nlohmann::ordered_json, a json representation of the Schematic object
  */
 nlohmann::ordered_json Schematic::toJson() {
     auto jsonObj = nlohmann::ordered_json{
-            {"name", SchemaUtils::u32StringToStdString(this->file_name_)},
-            {"path", SchemaUtils::u32StringToStdString(this->path_)},
+            {"name", SchemaUtils::wstringToStdString(this->file_name_)},
+            {"path", SchemaUtils::wstringToStdString(this->path_)},
             {"md5", this->md5_hash_},
             {"pageCount", this->getPageCount()},
             {"pages", nlohmann::ordered_json::array()}
     };
     for (int i = 1; i <= this->getPageCount(); ++i) {
-        jsonObj["pages"].push_back({SchemaUtils::u32StringToStdString(this->getParsedPage(i))});
+        jsonObj["pages"].push_back({this->getParsedPage(i)});
     }
     return jsonObj;
 }

@@ -10,14 +10,35 @@
 #include <filesystem>
 #include <iostream>
 #include <set>
+#include <initguid.h>
+#include <ShlObj.h>
+#include <KnownFolders.h>
 
 #include <hashlibpp.h>
 #include <nlohmann/json.hpp>
 
 // Constructors / Destructor
 
-SchematicHandler::SchematicHandler(const std::u32string &path) {
-    base_directory_ = path;
+SchematicHandler::SchematicHandler(const std::wstring &path) {
+    this->base_directory_ = path;
+    // Get %APPDATA% path and create directories
+    PWSTR LADPath = nullptr;
+    auto temp = SHGetKnownFolderPath(FOLDERID_ProgramFiles,0,NULL,&LADPath);
+    this->localAppDataPath = std::wstring(LADPath);
+    this->winCachePath = this->localAppDataPath + L"\\SchemaScan\\cache";
+    CoTaskMemFree(LADPath);
+    if (!std::filesystem::exists(this->localAppDataPath + L"\\SchemaScan") ||
+                                        !std::filesystem::exists(this->winCachePath)) {
+        try {
+            std::filesystem::create_directory(localAppDataPath + L"\\SchemaScan");
+            std::filesystem::create_directory(winCachePath);
+        }
+        catch (std::filesystem::filesystem_error &e) {
+            std::cerr << "Could not create cache directory: " << e.what() << "\n";
+            abort();
+        }
+    }
+    // ------------------
     if (SchemaUtils::isPdfFile(path)) {
         std::cout << "Given path points directly at a single schematic: " << "\n";
     }
@@ -51,18 +72,16 @@ void SchematicHandler::Scan() {
             }
         }
         catch (const std::out_of_range&) {
-            std::cerr << "Incorrect file path or type, skipping creation of Schematic object: "
-                      << SchemaUtils::u32StringToStdString(path) << "\n";
+            std::wcerr << "Incorrect file path or type, skipping creation of Schematic object: " << path << "\n";
             skipped_schematic_paths_.push_back(path);
         }
         catch (const hlException&) {
-            std::cerr << "Could not get hash of file, skipping creation of Schematic object: "
-                      << SchemaUtils::u32StringToStdString(path) << "\n";
+            std::wcerr << "Could not get hash of file, skipping creation of Schematic object: " << path << "\n";
             skipped_schematic_paths_.push_back(path);
         }
         catch (...) {
-            std::cerr << "Could not parse pdf file (or other error), skipping creation of Schematic object: "
-                      << SchemaUtils::u32StringToStdString(path) << "\n";
+            std::wcerr << "Could not parse pdf file (or other error), skipping creation of Schematic object: "
+                      << path << "\n";
             skipped_schematic_paths_.push_back(path);
         }
     }
@@ -74,15 +93,15 @@ void SchematicHandler::Scan() {
  *      otherwise there will be nothing to scan
  */
 void SchematicHandler::Search() {
-    std::u32string prefix = U"\\\\?\\";
+    std::wstring prefix = L"\\\\?\\";
     try {
         // Prefix and directory option necessary for long file paths on Windows. Without these the iteration stops
         // and throws an error when it encounters a path that's too long. The directory option also keeps the iterator
         // from throwing an error if it hits a directory or file that it doesn't have permission to access
         for (const auto &pathIt : std::filesystem::recursive_directory_iterator(
                 prefix + base_directory_, std::filesystem::directory_options::skip_permission_denied)) {
-            if (SchemaUtils::isPdfFile(pathIt.path().u32string())) {
-                fpaths_.insert(pathIt.path().u32string());
+            if (SchemaUtils::isPdfFile(pathIt.path().wstring())) {
+                fpaths_.insert(pathIt.path().wstring());
             }
         }
     }
@@ -92,7 +111,7 @@ void SchematicHandler::Search() {
     }
     // TODO: Remove this? Just used for testing, but maybe useful for the final program?
     for (const auto &path_str : fpaths_) {
-        std::cout << "Found Schematic: " << SchemaUtils::u32StringToStdString(path_str) << "\n";
+        std::wcout << "Found Schematic: " << path_str << "\n";
     }
 }
 
@@ -101,9 +120,9 @@ void SchematicHandler::Search() {
  * @param cacheDir The directory that the cache files will be stored at
  * @param overwrite A boolean, whether to overwrite a file that already exists
  */
-void SchematicHandler::cacheAll(const std::u32string &cacheDir, const bool overwrite) const {
+void SchematicHandler::cacheAll(const bool overwrite) const {
     for (auto &schem : this->schematics_) {
-        schem->cache(cacheDir, overwrite);
+        schem->cache(this->winCachePath, overwrite);
     }
 }
 
@@ -145,8 +164,8 @@ int SchematicHandler::getSkippedSchematicCount() const {
 /**
  * Get the absolute paths (file names included) for the .pdf files that could not be converted into Schematic objects
  *      for any reason
- * @return A vector of std::u32strings
+ * @return A vector of std::wstrings
  */
-std::vector<std::u32string> SchematicHandler::getSkippedSchematics() const {
+std::vector<std::wstring> SchematicHandler::getSkippedSchematics() const {
     return this->skipped_schematic_paths_;
 }
