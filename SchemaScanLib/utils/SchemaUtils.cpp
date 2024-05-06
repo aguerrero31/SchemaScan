@@ -14,7 +14,7 @@
  * @param fpath The (absolute) file path that you wish to check
  * @return A boolean, whether the path points directly to a .pdf file
  */
-bool SchemaUtils::isPdfFile(const std::u32string &fpath) {
+bool SchemaUtils::isPdfFile(const std::wstring &fpath) {
     return hasFileExt(fpath, ".pdf");
 }
 
@@ -23,7 +23,7 @@ bool SchemaUtils::isPdfFile(const std::u32string &fpath) {
  * @param fpath The (absolute) file path that you wish to check
  * @return A boolean, whether the path points directly to a .json file
  */
-bool SchemaUtils::isJsonFile(const std::u32string &fpath) {
+bool SchemaUtils::isJsonFile(const std::wstring &fpath) {
     return hasFileExt(fpath, ".json");
 }
 
@@ -33,12 +33,12 @@ bool SchemaUtils::isJsonFile(const std::u32string &fpath) {
  * @param extension The extension that you wish to check for (e.g. ".pdf")
  * @return A boolean, whether the path points at a file with said extension
  */
-bool SchemaUtils::hasFileExt(const std::u32string &fpath, const std::string &extension) {
+bool SchemaUtils::hasFileExt(const std::wstring &fpath, const std::string &extension) {
     return std::filesystem::path(fpath).extension() == extension;
 }
 
 /**
- * Converts std::u32string to a std::string
+ * Converts std::wstring to a std::string
  * @param u32_string The u32string to be converted
  * @return A converted std::string
  */
@@ -48,13 +48,29 @@ std::string SchemaUtils::u32StringToStdString(const std::u32string &u32_string) 
 }
 
 /**
- * Converts std::string to std::u32string
+ * Converts std::string to std::wstring
  * @param string The std::string to be converted
- * @return A converted std::u32string
+ * @return A converted std::wstring
  */
-std::u32string SchemaUtils::stdStringToU32String(const std::string &string) {
+std::u32string SchemaUtils::stdStringToU32String(const std::string &str) {
     static std::wstring_convert<std::codecvt_utf8<char32_t >, char32_t > converter;
-    return converter.from_bytes(string);
+    return converter.from_bytes(str);
+}
+
+/**
+ * Converts a std::wstring to std::string
+ * @param w_string
+ * @return
+ */
+std::string SchemaUtils::wstringToStdString(const std::wstring &w_string) {
+    static std::wstring_convert<std::codecvt_utf8<wchar_t >, wchar_t > converter;
+    return converter.to_bytes(w_string);
+}
+
+// Converts a std::string to std::wstring
+std::wstring SchemaUtils::stdStringToWString(const std::string &str) {
+    static std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>, wchar_t> converter;
+    return converter.from_bytes(str);
 }
 
 /**
@@ -63,8 +79,8 @@ std::u32string SchemaUtils::stdStringToU32String(const std::string &string) {
  * @param fpath The (absolute) file path that you wish to get information from
  * @return
  */
-std::u32string SchemaUtils::getNameFromPath(const std::u32string &fpath) {
-    std::u32string fileName = getNameAndExtFromPath(fpath);
+std::wstring SchemaUtils::getNameFromPath(const std::wstring &fpath) {
+    std::wstring fileName = getNameAndExtFromPath(fpath);
     if (fileName.find('.') != std::string::npos) {
         std::size_t foundAt = fileName.find_last_of('.');
         return fileName.substr(0, foundAt);
@@ -78,7 +94,7 @@ std::u32string SchemaUtils::getNameFromPath(const std::u32string &fpath) {
  * @param fpath The (absolute) file path that you wish to get information from
  * @return
  */
-std::u32string SchemaUtils::getNameAndExtFromPath(const std::u32string &fpath) {
+std::wstring SchemaUtils::getNameAndExtFromPath(const std::wstring &fpath) {
     std::size_t foundAt;
     if (fpath.find('/') != std::string::npos) {
         foundAt = fpath.find_last_of('/');
@@ -94,7 +110,7 @@ std::u32string SchemaUtils::getNameAndExtFromPath(const std::u32string &fpath) {
  * @param fpath The (absolute) file path that you wish to get information from
  * @return
  */
-std::u32string SchemaUtils::getDirectoryFromPath(const std::u32string &fpath) {
+std::wstring SchemaUtils::getDirectoryFromPath(const std::wstring &fpath) {
     std::size_t foundAt;
     if (fpath.find('/') != std::string::npos) {
         foundAt = fpath.find_last_of('/');
@@ -114,17 +130,17 @@ std::u32string SchemaUtils::getDirectoryFromPath(const std::u32string &fpath) {
  * @param type Default Absolute. A fileNameType enum that determines the type of string(s) that you will get back
  * @return A set of
  */
-std::set<std::u32string> SchemaUtils::searchDirectoryFor(const std::u32string &directory, const std::string &extension,
+std::set<std::wstring> SchemaUtils::searchDirectoryFor(const std::wstring &directory, const std::string &extension,
                                                          const fileNameType &type) {
-    std::u32string prefix = U"\\\\?\\";
-    std::set<std::u32string> found;
+    std::wstring prefix = L"\\\\?\\";
+    std::set<std::wstring> found;
     // Prefix and directory option necessary for long file paths on Windows. Without these the iteration stops
     // and throws an error when it encounters a directory that's too long. The directory option also keeps the iterator
     // from throwing an error if it hits a directory or file that it doesn't have permission to access
     for (const auto &pathIt: std::filesystem::recursive_directory_iterator(
             prefix + directory, std::filesystem::directory_options::skip_permission_denied)) {
-        if (hasFileExt(pathIt.path().u32string(), extension)) {
-            std::u32string absPath = pathIt.path().u32string();
+        if (hasFileExt(pathIt.path().wstring(), extension)) {
+            std::wstring absPath = pathIt.path().wstring();
             if (type == fileNameType::Extension) {
                 found.insert(getNameAndExtFromPath(absPath));
             }
