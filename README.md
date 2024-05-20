@@ -2,7 +2,7 @@
 
 WORK IN PROGRESS, not yet functional
 
- An Electronics Schematic (.pdf) parser written primarily in C++. Contains a library (SchemaScanLib), a Console Application (SchemaScanConsole), and a GUI Application (SchemaScan, not yet implemented). This was created to aid in searching electronics schematics for specific parts (or whatever you want, really).
+ An Electronics Schematic (.pdf) searcher written primarily in C++. Contains a library (SchemaScanLib), a Console Application (SchemaScanConsole), and a GUI Application (SchemaScan, not yet implemented). This was created to aid in searching electronics schematics for specific parts (or whatever you want, really).
 
  Features:
  - Scanning and parsing of Electronics Schematics (.pdf files)
